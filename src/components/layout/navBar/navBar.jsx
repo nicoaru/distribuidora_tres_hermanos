@@ -19,13 +19,13 @@ function NavBar() {
                     <NavLink activeClassName='link-active' className='link' to='/conocenos'>Conocenos</NavLink>
                 </li>
                 <li>
-                    <NavLink activeClassName='link-active' className='link' to='/category/productos'>Productos</NavLink>
+                    <NavLink activeClassName='link-active' className='link' to='/productos'>Productos</NavLink>
                 </li>
                 <li>
-                    <NavLink activeClassName='link-active' className='link' to='/category/como_comprar'>Cómo comprar</NavLink>
+                    <NavLink activeClassName='link-active' className='link' to='/como_comprar'>Cómo comprar</NavLink>
                 </li>
                 <li>
-                    <NavLink activeClassName='link-active' className='link' to='/category/contacto'>Contacto</NavLink>
+                    <NavLink activeClassName='link-active' className='link' to='/contacto'>Contacto</NavLink>
                 </li>
             </ul>
             {/* <CartWidget/> */}
