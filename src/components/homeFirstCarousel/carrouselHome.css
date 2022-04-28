@@ -1,0 +1,18 @@
+.homeMainCarouselContainer{
+   
+    
+}
+.aux{
+    height: 40vh;
+}
+img.d-block{
+    object-fit: cover;
+    height: 200px;
+    
+}
+a {
+    text-decoration: none;
+}
+.carousel-control-next{
+    transition:5s ease-in-out left;
+}

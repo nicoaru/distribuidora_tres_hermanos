@@ -6,7 +6,7 @@ import { Productos } from "./pages/productos/productos";
 import { ComoComprar } from "./pages/comoComprar/comoComprar";
 import { Contacto } from "./pages/contacto/contacto";
 import { PageNotFound } from "./pages/pageNotFound/pageNotFound";
-import { Layout } from "./components/layout/layout/layout";
+import { Layout } from "./components/layout/layout";
 
 function Router() {
   return (
