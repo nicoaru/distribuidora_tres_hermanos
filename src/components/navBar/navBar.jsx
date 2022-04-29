@@ -6,8 +6,8 @@ import './navBar.css';
 
 function NavBar() {
 
-    const [burger, setBurger] = useState('fa-solid fa-bars');
-    const [toggle, setToggle] = useState(true)
+    let [burger, setBurger] = useState('fa-solid fa-bars');
+    let [toggle, setToggle] = useState(true)
 
     const click = useRef()
 
@@ -16,22 +16,24 @@ function NavBar() {
         toggle ? setBurger('fa-solid fa-xmark') : setBurger('fa-solid fa-bars')
     }
     const reset = (e) => {
-        click.current.click()
+        if (window.innerWidth < 760) {
+            click.current.click()
+        }
     }
 
     return (
         <div className='navBar'>
-            <nav className="navbar navbar-expand-lg navbar-light">
+            <Link className='navbar-brand' exact to='/'>
+                <d1 >Los 3 Hermanos</d1>
+            </Link>
+            <nav className="navbar navbar-expand-md navbar-light">
                 {/* <a className="navbar-brand" href="#">Navbar</a> */}
                 <div className='logoContainer'>
-                    <Link className='navbar-brand' exact to='/'>
-                        <d1 onClick={reset}>Los 3 Hermanos</d1>
-                    </Link>
-
                     <button ref={click} onClick={handleBurger} className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <i className={burger}></i>
                     </button>
                 </div>
+
 
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav">

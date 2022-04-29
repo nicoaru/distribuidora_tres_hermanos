@@ -7,9 +7,21 @@
 
 d1{
     font-family: 'Unica One';
+    text-decoration: none;
 }
+
 d5{
     font-family: 'Raleway', sans-serif;
+}
+.navbar-brand:hover{
+    color:var(--main-text-active-color)
+}
+.navbar-brand{
+    color: var(--main-text-color);
+    position: absolute;
+    left: 3%;
+    top:7px;
+    z-index: 1;
 }
 .navBar {
     min-width: 100%;
@@ -19,40 +31,40 @@ d5{
     justify-content: center;
     align-items: center;
 }
-.navbar.navbar-expand-lg.navbar-light{
+.navbar.navbar-expand-md.navbar-light{
     padding: 1em;
     min-width: 100%;
     display: flex;
 }
-
 .navbar-toggler:focus{
     outline: none;
-    box-shadow: none;
-    
+    box-shadow: none;  
 }
 .navbar-toggler:active{
     outline: none;
     box-shadow: none;
-    transform: rotateZ(360) 2s ease-in-out;
 }
 .navbar-toggler{
     outline: none;
     border: none;
-    transform: rotateZ(360) 2s ease-in-out;
 }
 .fa-bars:hover {
     transform:rotateZ(180deg);
     transition: 0.3s ease-in;
 }
-
-
 .logoContainer{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.logoContainerDesktop{
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    visibility: hidden;
 }
-
 ul {
     padding: 0px;
     flex-grow: 1;
@@ -64,16 +76,13 @@ li {
     list-style: none;
     padding: 0px 20px;
 }
-
 .link {
     text-decoration: none;
     color: inherit;
 }
-
 .link:hover{
     color: var(--main-text-active-color);
     font-weight:900;
-   
 }
 
 .active d5{
@@ -83,12 +92,10 @@ li {
     border-bottom-style: solid;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 760px) {
 
-    .logoContainer {
-  
-        color: red;
-       
+    .link{
+        white-space: nowrap;
+        margin-left: 3.5vw;
     }
-
 }
