@@ -5,13 +5,14 @@
     --main-text-hover-color: whitesmoke;
 }
 
-d1{
+.d1{
     font-family: 'Unica One';
     text-decoration: none;
 }
 
-d5{
+.d5{
     font-family: 'Raleway', sans-serif;
+    height: 100%;
 }
 .navbar-brand:hover{
     color:var(--main-text-active-color)
@@ -20,7 +21,7 @@ d5{
     color: var(--main-text-color);
     position: absolute;
     left: 3%;
-    top:7px;
+    top:0.8rem;
     z-index: 1;
 }
 .navBar {
@@ -30,9 +31,10 @@ d5{
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
-.navbar.navbar-expand-md.navbar-light{
-    padding: 1em;
+.navbar.navbar-expand-lg.navbar-light{
+    padding: 1rem;
     min-width: 100%;
     display: flex;
 }
@@ -45,13 +47,25 @@ d5{
     box-shadow: none;
 }
 .navbar-toggler{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5rem;
+    width: 2.5rem;
     outline: none;
     border: none;
+}
+.navbar-toggler:hover{
+    background-color: var(--main-text-active-color);
+    border-radius: 50%;
 }
 .fa-bars:hover {
     transform:rotateZ(180deg);
     transition: 0.3s ease-in;
 }
+/* .navbar-nav{
+    padding-top: 1rem;
+} */
 .logoContainer{
     width: 100%;
     display: flex;
@@ -61,7 +75,6 @@ d5{
 .logoContainerDesktop{
     width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     visibility: hidden;
 }
@@ -73,29 +86,51 @@ ul {
     justify-content: space-evenly;
 }
 li {
+    
     list-style: none;
     padding: 0px 20px;
+    
 }
 .link {
     text-decoration: none;
     color: inherit;
+    display: flex;
+    margin-top: 4vw;
+
+    
 }
+.link p{
+    margin: 0;
+}
+.link .d5{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
 .link:hover{
     color: var(--main-text-active-color);
     font-weight:900;
 }
 
-.active d5{
+.active .d5{
     font-weight: 600;
     color: var(--main-text-active-color);
     border-bottom-width: 1px;
     border-bottom-style: solid;
 }
 
-@media (min-width: 760px) {
+@media (min-width: 992px) {
 
     .link{
         white-space: nowrap;
         margin-left: 3.5vw;
+    }
+    .link{
+        margin-top: 0rem;
+    }
+    .navbar-brand{
+        top:0.20rem;
+        padding-top: 0.1rem;
     }
 }
