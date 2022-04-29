@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import Logo from '../logo/Logo';
 // import { CartWidget } from '../../cartWidget/cartWidget';
 import './navBar.css';
 
@@ -23,9 +24,7 @@ function NavBar() {
 
     return (
         <div className='navBar'>
-            <Link className='navbar-brand' to='/'>
-                <h1 className='d1'>Los 3 Hermanos</h1>
-            </Link>
+            <Logo location='navbar-brand' />
             <nav className="navbar navbar-expand-lg navbar-light">
                 {/* <a className="navbar-brand" href="#">Navbar</a> */}
                 <div className='logoContainer'>
