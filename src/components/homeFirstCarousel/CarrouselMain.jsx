@@ -5,10 +5,9 @@ import img3 from '../../img/img2.jpeg'; // with import
 import './carrouselHome.css'
 
 const CarrouselMain = () => {
+
     return (
         <div className="homeMainCarouselContainer">
-            Previous
-            NextCopy
             <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
                 <ol className="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" className='active'>•</li>
@@ -28,11 +27,11 @@ const CarrouselMain = () => {
                 </div>
                 <a className="carousel-control-prev" role="button" href='#carouselExampleIndicators' data-slide="prev">
                     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span className="sr-only">Previous</span>
+                    <span className="sr-only"></span>
                 </a>
                 <a className="carousel-control-next" href='#carouselExampleIndicators' role="button" data-slide="next">
                     <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="sr-only">Next</span>
+                    <span className="sr-only"></span>
                 </a>
             </div>
         </div>

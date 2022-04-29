@@ -2,6 +2,15 @@
    
     
 }
+.carousel-indicators{
+    color: gray;
+}
+.carousel-indicators .active{
+    color: white;
+}
+li{
+    font-size:x-large;
+}
 .aux{
     height: 40vh;
 }
