@@ -1,0 +1,16 @@
+.card {
+    width: 262px;
+    height: 418px;
+}
+
+.card .card-text {
+    color: #283333;
+}
+
+.card .card-title {
+    color: #283333;
+}
+
+.card .card-price {
+    color: #D5A322;
+}

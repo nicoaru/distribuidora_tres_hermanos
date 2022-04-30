@@ -17,7 +17,7 @@ function Router() {
           <Route exact path="/" element={<Home />} />
           <Route path="/conocenos" element={<Conocenos />} />
           <Route path="/productos" element={<Productos />} />
-          <Route path="/como-comprar" element={<ComoComprar />} />
+          <Route path="/como_comprar" element={<ComoComprar />} />
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/*" element={<PageNotFound />} />
         </Route>

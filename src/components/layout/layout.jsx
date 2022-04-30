@@ -3,13 +3,12 @@ import { Footer } from "../footer/footer";
 import './layout.css'
 import { Outlet } from "react-router-dom";
 
-function Layout({ children }) {
+function Layout() {
 
     return (
         <main className='main'>
             <NavBar />
             <Outlet />
-            {children}
             <Footer />
 
         </main>
