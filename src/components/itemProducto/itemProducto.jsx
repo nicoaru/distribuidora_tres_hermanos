@@ -1,20 +1,29 @@
 import React from "react";
 import './itemProducto.css'
-import productoEjemplo1 from '../../img/ProoductoEjemplo1.png'
 
 
 
 
 function ItemProducto({producto}) {
 
+    console.log("Producto recibido: ", producto)
+    // let producto = {
+    //     nombre: 'Muzzarella',
+    //     marca: 'Puyehue',
+    //     precio: 710,
+    //     cantidadVenta: 'el kg',
+    //     imgUrl:productoEjemplo1}
+
     return(
-        <div className="card">
-            <img src={productoEjemplo1} className="card-img-top" alt="Queso Cremoso La Paulina"/>
-            <div className="card-body">
-                <p className="card-subTitle">La Paulina</p>
-                <h5 className="card-title">Queso Cremoso</h5>
-                <h6 className="card-price">$750</h6>
-                <a href="#" class="btn btn-primary">Ver detalles</a>
+        <div className="item d-flex justify-content-center">
+            <div className="card justify-content-center d-flex flex-column align-content-center">
+                <img src={producto.imgUrl} className="card-img-top" alt={`${producto.nombre} ${producto.marca}`}/>
+                <div className="p-0 card-body d-flex flex-column justify-content-center align-content-center">
+                    <p className="card-subTitle">{producto.marca}</p>
+                    <h5 className="card-title">{producto.nombre}</h5>
+                    <h6 className="card-price">{`$${producto.precio} ${producto.cantidadVenta}`}</h6>
+                    <a href="#" class="card-button">Ver detalles</a>
+                </div>
             </div>
         </div>
 

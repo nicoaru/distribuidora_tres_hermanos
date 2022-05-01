@@ -4,7 +4,14 @@ import './contacto.css'
 function Contacto() {
     return (
         <div className='contacto'>
-            <h1>Pagina Contacto</h1>
+            <div>
+                <h1>Contactanos</h1>
+                
+            </div>
+
+            <div>
+                <h1>Dejanos tu consulta</h1>
+            </div>
         </div>
     )
 }

@@ -18,7 +18,7 @@ function CarouselMarcas() {
     let cards = imagenes.map((img, index) => {
         return <div className='item' key={index}> <img src={img}/> </div>})
 
-    let carouselResponsive = {0:{items:3, slideBy:3, margin:30}, 576:{margin:50}, 768:{margin:50}, 992:{margin:80}, 1200:{margin:120}}
+    let carouselResponsive = {0:{items:3, slideBy:3, margin:50}, 576:{items:3, slideBy:3, margin:50}, 992:{items:3, slideBy:3, margin:80}, 1200:{items:3, slideBy:3, margin:120}}
 
 
     return(

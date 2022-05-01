@@ -1,0 +1,10 @@
+.carouselProductosContainer {
+    margin: 20px 0px;
+    padding: 0px 15px;
+}
+
+@media (min-width: 992px) {
+    .carouselProductosContainer {
+        padding: 0px 15px;
+    }
+}

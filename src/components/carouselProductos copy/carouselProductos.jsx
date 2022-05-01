@@ -54,18 +54,23 @@ function CarouselProductos() {
 
     console.log("Productos: ", cards)
 
-    let carouselProdResponsive = {0:{items:1, slideBy:1, margin:0}, 768:{items:2, slideBy:2, margin:0}, 992:{items:3, slideBy:3, margin:50}, 1200:{items:3, slideBy:3, margin:80}}
+    let carouselProductosResponsive = {0:{items:1, slideBy:1, margin:0}, 576:{items:2, slideBy:1, margin:50}, 768:{items:2, slideBy:1, margin:30}, 1050:{items:3, slideBy:1, margin:80}, 1200:{items:3, slideBy:1, margin:120}}
 
 
     return(
 
+    <div>
         <div className="container-fluid d-flex justify-content-center my-5">
-            <div className="carouselProductosContainer  col-12 col-sm-8 col-md-10">
-                <OwlCarousel className="" responsive={{...carouselProdResponsive}} autoplay={false} autoplayTimeout={2000} autoplayHoverPause={true} loop>
+            <div className="carouselProductosContainer d-flex justify-content-center col-12">
+                <OwlCarousel className="olw-theme" responsive={{...carouselProductosResponsive}} center={true} autoWidth={true} loop nav dots>
                     {cards}
                 </OwlCarousel>
             </div>
         </div>
+        <div>
+            {cards}
+        </div>
+    </div>
 
     )
 }
