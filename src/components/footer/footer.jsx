@@ -19,7 +19,7 @@ function Footer() {
                         </Link>
 
                         <Link className='footer-iconos' to='/'>
-                            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                            <i className="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
                         </Link>
                     </div>
                 </div>

@@ -61,7 +61,7 @@ function CarouselProductos() {
 
         <div className="container-fluid d-flex justify-content-center my-5">
             <div className="carouselProductosContainer  col-12 col-sm-8 col-md-10">
-                <OwlCarousel className="" responsive={{...carouselProdResponsive}} autoplay={false} autoplayTimeout={2000} autoplayHoverPause={true} loop>
+                <OwlCarousel responsive={{...carouselProdResponsive}} nav autoplay={false} loop>
                     {cards}
                 </OwlCarousel>
             </div>
