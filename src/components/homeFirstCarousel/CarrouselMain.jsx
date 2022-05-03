@@ -1,58 +1,68 @@
 import React from 'react'
-import img1 from '../../img/cat1.jpeg'; // with import
-import img2 from '../../img/hdSun.jpeg'; // with import
-import img3 from '../../img/img2.jpeg'; // with import
+import img1 from '../../img/tienda/pexels-polina-tankilevitch-4187777.jpg'
+import img2 from '../../img/tienda/pexels-karolina-grabowska-5202246.jpg'; // with import
+import img3 from '../../img/tienda/pexels-engin-akyurt-2531189.jpg'; // with import
 import './carrouselHome.css'
+import OwlCarousel from 'react-owl-carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
+import { NavLink } from 'react-router-dom';
+
 
 const CarrouselMain = () => {
 
+
+    let cards = [
+        <img src={img1} />,
+        <img src={img2} />,
+        <img src={img3} />,
+    ]
+
+    console.log("Productos: ", cards)
+
+    let carouselProdResponsive = {
+        0: { items: 1, slideBy: 1, margin: 0 },
+        768: { items: 1, slideBy: 2, margin: 0 },
+        992: { items: 1, slideBy: 3, margin: 50 },
+        1200: { items: 1, slideBy: 3, margin: 80 }
+    }
+
+
     return (
-        <div className="homeMainCarouselContainer">
-            <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
-                <ol className="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" className='active'>•</li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1">•</li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2">•</li>
-                </ol>
-                <div className="carousel-inner">
-                    <div className="carousel-item active">
-                        <img className="d-block w-100" src={img1} alt="First slide" />
-                    </div>
-                    <div className="carousel-item">
-                        <img className="d-block w-100" src={img2} alt="Second slide" />
-                    </div>
-                    <div className="carousel-item">
-                        <img className="d-block w-100" src={img3} alt="Third slide" />
+        <div className='main-carusel-div'>
+            <div className="container-fluid d-flex justify-content-center my-5">
+                <div className="carouselProductosContainer col-12">
+                    <div className='img-carrusel'>
+                        <OwlCarousel responsive={{ ...carouselProdResponsive }} nav autoplay={false} loop>
+                            {cards}
+                        </OwlCarousel>
+                        <div className='content-screen'>
+                            <div className='outerborder'>
+                                <div className='cardHome'>
+                                    <h1 className='text-light'>¿Quieres comprar al por mayor?</h1>
+                                    <p>Encuentra aqui una gran variedad de quesos para tu negocio</p>
+                                    <NavLink className='btn como-comprar' to='/como_comprar'>COMO COMPRAR
+                                    </NavLink>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <a className="carousel-control-prev" role="button" href='#carouselExampleIndicators' data-slide="prev">
-                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span className="sr-only"></span>
-                </a>
-                <a className="carousel-control-next" href='#carouselExampleIndicators' role="button" data-slide="next">
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="sr-only"></span>
-                </a>
             </div>
         </div>
+
     )
 }
 
 export default CarrouselMain
-{/* 
-<img className="dBlock w-100"
-                                src="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y3V0ZSUyMGNhdHxlbnwwfHwwfHw%3D&w=1000&q=80"
-                                alt="First slide" />
-                        </div>
 
-                    </div>
-                    <div className="carousel-item">
-                        <img className="d-block w-100"
-                            src="https://i.natgeofe.com/n/f0dccaca-174b-48a5-b944-9bcddf913645/01-cat-questions-nationalgeographic_1228126_4x3.jpg"
-                            alt="Second slide" />
-                    </div>
-                    <div className="carousel-item">
-                        <img className="d-block w-100"
-                            src="https://i.pinimg.com/originals/7e/0a/50/7e0a507de8cf8b46e0f2665f1058ef37.jpg"
-                            alt="Third slide" /> */}
+{/* <div>
+<div className="container-fluid d-flex justify-content-center my-5">
+    <div className="carouselProductosContainer  col-12 col-sm-8 col-md-10">
+        <OwlCarousel responsive={{ ...carouselProdResponsive }} nav autoplay={false} loop>
+            {cards}
+        </OwlCarousel>
+    </div>
+</div>
+</div> */}
 

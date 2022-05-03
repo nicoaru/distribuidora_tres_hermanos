@@ -29,8 +29,10 @@
 }
 .imagenes img{
     object-fit: contain;
-    height: 10rem;
-    width: 10rem;
+    height: 20vw;
+    height: 20vw;
+    max-height: 8rem ;
+    max-width: 8rem;
     border-radius: 50%;
 }
 /* Montserrat font normal text */
