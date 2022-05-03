@@ -1,0 +1,25 @@
+:root {
+    --formulario-bg-color: #F3F4EF;
+    --formulario-btn-bg-color: #2C4545;
+    --formulario-btn-active-color: #FFFFFF;
+    --formulario-text-hover-color: whitesmoke;
+}
+
+.btn.mt-3{
+    width: 100%;
+    background-color: var(--formulario-btn-bg-color) ;
+    color: var(--formulario-btn-active-color)
+}
+.form-contacto.p-3 input{
+    background-color: var(--formulario-bg-color);
+}
+.form-contacto.p-3 textarea{
+    background-color: var(--formulario-bg-color);
+}
+
+@media (min-width: 800px) {
+    .btn.mt-3{
+        width: 30%;
+    }
+}
+

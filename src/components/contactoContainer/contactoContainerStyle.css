@@ -1,0 +1,10 @@
+.main-contacto{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+@media (min-width: 800px) {
+    .main-contacto{
+        flex-direction: row;
+    }
+}

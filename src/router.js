@@ -8,22 +8,28 @@ import { Contacto } from "./pages/contacto/contacto";
 import { PageNotFound } from "./pages/pageNotFound/pageNotFound";
 import { Layout } from "./components/layout/layout";
 import DocumentPDF from "./components/pdf/DocumentPDF.jsx";
+import ListaPrecios from "./components/listadoPrecios/ListaPrecios";
+import ProductProvider from "./context/ProductProvider";
 
 function Router() {
   return (
 
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />} >
-          <Route exact path="/" element={<Home />} />
-          <Route path="/conocenos" element={<Conocenos />} />
-          <Route path="/productos" element={<Productos />} />
-          <Route path="/como_comprar" element={<ComoComprar />} />
-          <Route path="/contacto" element={<Contacto />} />
-          <Route path="/precios/*" element={<DocumentPDF />} />
-          <Route path="/*" element={<PageNotFound />} />
-        </Route>
-      </Routes>
+      <ProductProvider>
+        <Routes>
+
+          <Route path="/" element={<Layout />} >
+            <Route exact path="/" element={<Home />} />
+            <Route path="/conocenos" element={<Conocenos />} />
+            <Route path="/productos" element={<Productos />} />
+            <Route path="/como_comprar" element={<ComoComprar />} />
+            <Route path="/contacto" element={<Contacto />} />
+            <Route path="/precios" element={<ListaPrecios />} />
+            <Route path="/*" element={<PageNotFound />} />
+          </Route>
+        </Routes>
+      </ProductProvider>
+
     </BrowserRouter>
 
 
