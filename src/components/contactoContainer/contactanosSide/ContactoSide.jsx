@@ -3,15 +3,20 @@ import IconoContacto from '../contactoIcono/IconoContacto'
 import './contactoSideStyle.css'
 const ContactoSide = () => {
 
-
+    const reloj = "fa-regular fa-clock";
+    const tel = "fa-solid fa-phone";
+    const dir = "fa-solid fa-location-dot";
+    const mail = "fa-regular fa-envelope";
 
     return (
         <div className='main-contacto-side'>
             <h3>Contactanos</h3>
-            <IconoContacto datoPrincipal="TELEFONO" datoSecundario="+549*******" icono="tel" />
-            <IconoContacto datoPrincipal="MAIL" datoSecundario="dist@gmail.com" icono="carta" />
-            <IconoContacto datoPrincipal="HORARIO" datoSecundario="Atendemos entre 8 - 18" icono="reloj" />
-            <IconoContacto datoPrincipal="DIRECCION" datoSecundario="Direccion" icono="gota" />
+            <div className='auxDivContactos'>
+                <IconoContacto datoPrincipal="TELEFONO" datoSecundario="+549*******" icono={tel} />
+                <IconoContacto datoPrincipal="MAIL" datoSecundario="dist@gmail.com" icono={mail} />
+                <IconoContacto datoPrincipal="HORARIO" datoSecundario="Atendemos entre 8 - 18" icono={reloj} />
+                <IconoContacto datoPrincipal="DIRECCION" datoSecundario="Direccion" icono={dir} />
+            </div>
         </div>
     )
 }

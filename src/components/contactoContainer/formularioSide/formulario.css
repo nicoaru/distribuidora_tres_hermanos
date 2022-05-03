@@ -4,7 +4,9 @@
     --formulario-btn-active-color: #FFFFFF;
     --formulario-text-hover-color: whitesmoke;
 }
-
+.main-formulario{
+    
+}
 .btn.mt-3{
     width: 100%;
     background-color: var(--formulario-btn-bg-color) ;

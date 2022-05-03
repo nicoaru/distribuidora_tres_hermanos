@@ -1,7 +1,9 @@
 import React from 'react'
 import IconoInfo from '../iconoInfo/IconoInfo'
 import './iconosContainerStyle.css'
-import sun from '../../img/hdSun.jpeg'
+import clock from '../../img/iconos/Ilustraciones_iconos-10.png'
+import phone from '../../img/iconos/Ilustraciones_iconos-11.png'
+import truck from '../../img/iconos/Ilustraciones_iconos-12.png'
 
 const IconosContainer = () => {
     const msgPrincipal1 = 'ZONA DE DESPACHO'
@@ -12,9 +14,9 @@ const IconosContainer = () => {
     const msgSecundario3 = 'Atencion: 8hs - 18hs'
     return (
         <div className='iconos-conotainer'>
-            <IconoInfo imagen={sun} textoSecundario={msgSecundario1} textoPrincipal={msgPrincipal1} />
-            <IconoInfo imagen={sun} textoSecundario={msgSecundario2} textoPrincipal={msgPrincipal2} />
-            <IconoInfo imagen={sun} textoSecundario={msgSecundario3} textoPrincipal={msgPrincipal3} />
+            <IconoInfo imagen={clock} textoSecundario={msgSecundario1} textoPrincipal={msgPrincipal1} />
+            <IconoInfo imagen={phone} textoSecundario={msgSecundario2} textoPrincipal={msgPrincipal2} />
+            <IconoInfo imagen={truck} textoSecundario={msgSecundario3} textoPrincipal={msgPrincipal3} />
         </div>
     )
 }

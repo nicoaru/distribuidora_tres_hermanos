@@ -3,7 +3,7 @@ import './formulario.css'
 
 const Formulario = () => {
     return (
-        <div>
+        <div className='main-formulario'>
             <h3>Dejanos tu Consulta</h3>
             <p>Completa este formulario y te responderemos a la brevedad</p>
             <form className='form-contacto p-3' action="">
