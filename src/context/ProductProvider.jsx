@@ -13,28 +13,37 @@ const ProductProvider = ({ children }) => {
 
     const imagenes = [azulEmperador, comboElJuan, cremaLacteosCLP, cremosoElJuan]
 
+
     const listaProductos = [{
         id: 1,
         nombre: 'Queso 1',
         precio: '95',
         descripcion: 'Queso cremoso',
+        cantidadVenta: 'kg',
+        imgUrl: azulEmperador,
     },
     {
         id: 2,
         nombre: 'Queso 2',
         precio: '105',
         descripcion: 'Queso duro',
+        cantidadVenta: 'kg',
+        imgUrl: comboElJuan
     },
     {
         id: 3,
         nombre: 'Queso 3',
         precio: '200',
         descripcion: 'Queso Roque',
+        cantidadVenta: 'kg',
+        imgUrl: cremaLacteosCLP
     }, {
         id: 4,
         nombre: 'Queso 4',
         precio: '290',
         descripcion: 'Queso azul',
+        cantidadVenta: 'kg',
+        imgUrl: cremosoElJuan
     }]
 
     return (

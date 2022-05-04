@@ -33,12 +33,10 @@ function NavBar() {
                     </button>
                 </div>
 
-
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav">
                         <NavLink onClick={reset} className='link' to='/'>
                             <p className='d5'>HOME</p>
-
                         </NavLink>
                         <NavLink onClick={reset} className='link' to='/conocenos'>
                             <p className='d5' className='d5' >CONOCENOS</p>
@@ -55,30 +53,6 @@ function NavBar() {
                     </div>
                 </div>
             </nav >
-            {/* <ul>
-                <li>
-                    <Link className='link' exact to='/'>
-                        <p>LOGO</p>
-                    </Link>
-                </li>
-                <li>
-                    <NavLink className='link' exact to='/'>
-                        <d5>HOME</d5></NavLink>
-                </li>
-                <li>
-                    <NavLink className='link' to='/conocenos'><d5>CONOCENOS</d5></NavLink>
-                </li>
-                <li>
-                    <NavLink className='link' to='/productos'><d5>PRODUCTOS</d5></NavLink>
-                </li>
-                <li>
-                    <NavLink className='link' to='/como_comprar'><d5>COMO COMPRAR</d5></NavLink>
-                </li>
-                <li>
-                    <NavLink className='link' to='/contacto'><d5>CONTACTO</d5></NavLink>
-                </li>
-            </ul> */}
-            {/* <CartWidget/> */}
         </div >
 
 

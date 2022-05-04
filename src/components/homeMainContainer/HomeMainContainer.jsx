@@ -12,9 +12,11 @@ import IconosContainer from '../iconoContainer/IconosContainer';
 
 const HomeMainContainer = () => {
 
+    const mainText = '¿Quieres comprar al por mayor?'
+    const textoSecundario = 'Encuentra aqui una gran variedad de quesos para tu negocio'
     return (
         <div>
-            <CarrouselMain />
+            <CarrouselMain heightImg='80vh' tituloPrim={mainText} texto={textoSecundario} />
             <IconosContainer />
             <CarouselProductos />
             <DescargarPrecios />
@@ -23,5 +25,6 @@ const HomeMainContainer = () => {
         </div>
     )
 }
+
 
 export default HomeMainContainer

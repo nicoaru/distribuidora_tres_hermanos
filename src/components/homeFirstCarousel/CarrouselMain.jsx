@@ -9,13 +9,13 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 import { NavLink } from 'react-router-dom';
 
 
-const CarrouselMain = () => {
+const CarrouselMain = ({ heightImg, texto, tituloPrim }) => {
 
 
     let cards = [
-        <img src={img1} />,
-        <img src={img2} />,
-        <img src={img3} />,
+        <img style={{ height: heightImg }} src={img1} />,
+        <img style={{ height: heightImg }} src={img2} />,
+        <img style={{ height: heightImg }} src={img3} />,
     ]
 
     console.log("Productos: ", cards)
@@ -39,8 +39,8 @@ const CarrouselMain = () => {
                         <div className='content-screen'>
                             <div className='outerborder'>
                                 <div className='cardHome'>
-                                    <h1 className='text-light'>¿Quieres comprar al por mayor?</h1>
-                                    <p>Encuentra aqui una gran variedad de quesos para tu negocio</p>
+                                    <h3 className='text-light'>{tituloPrim}</h3>
+                                    <p>{texto}</p>
                                     <NavLink className='btn como-comprar' to='/como_comprar'>COMO COMPRAR
                                     </NavLink>
                                 </div>
