@@ -1,0 +1,12 @@
+.todoIconos{
+    display: flex;
+}
+.textIconos{
+margin: 2vh;
+}
+.iconoIconos{
+    min-width: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,70 @@
+:root {
+    --contacto-bg-color: #283333;
+    --contacto-text-color: #FFFFFF;
+    --contacto-text-active-color: #D5A322;
+    --contacto-text-hover-color: whitesmoke;
+}
+.main-contacto{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.img.col-12.col-md-4{
+    background-color: #283333;
+    filter: brightness(40%);
+    object-fit: cover;
+    max-height: 500px;
+}
+.divAux.col-12.col-md-4{
+    position: relative;
+    width: 100%;
+
+}
+.contentAux{
+    position: absolute;
+    top: 5px;
+    color: white;
+    width: 100%;
+}
+.redes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   color: var(--contacto-text-active-color);
+   
+
+}
+.redesIconos{
+    display: flex;
+
+}
+.redesIconos p i{
+    margin: 0 0 0 2rem;
+    display: flex;
+    align-items: flex-end;
+}
+
+
+@media (min-width: 760px) {
+    .main-contacto{
+        flex-direction: row;
+    }
+    .divAux.col-12.col-md-4{
+        position: relative;
+        width: 400px;
+        background-color: pink;
+    }
+    .img.col-12.col-md-4{
+        max-height: 80vh;
+        min-height: 550px;
+        object-fit: cover;
+        width: 100%;
+    }
+    .formulario-side-div{
+        padding-left: 2rem
+    }
+
+     
+}
+

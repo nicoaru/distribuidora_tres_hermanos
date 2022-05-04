@@ -1,0 +1,16 @@
+table{
+    margin: 0 0 3rem 3rem;
+}
+.img-thumbnail{
+    height: 100px;
+    object-fit: cover;
+}
+tr{
+    border-bottom: 1px solid rgb(208, 208, 208);
+}
+th{
+    padding-right: 3rem
+}
+td{
+    padding-right: 3rem;    
+}

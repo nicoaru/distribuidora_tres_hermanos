@@ -1,27 +1,71 @@
-.homeMainCarouselContainer{
-   
+:root {
+    --main-carusel-bg-color: #F3F4EF;
+    --main-screen-bg-color: #2C4545;
+    --footer-text-active-color: #D5A322;
+    --footer-text-color: whitesmoke;
+}
+.main-carusel-div{
+    background-color: var(--main-carusel-bg-color);
+}
+
+.main-carusel-div img{
+    height: 80vh;
+   object-fit: cover;
+}
+
+.owl-nav {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+}
+.owl-nav .owl-prev, .owl-nav .owl-next {
+    position: absolute;
+    color: inherit;
+    background: none;
+    border: none;
     
 }
-.carousel-indicators{
-    color: gray;
+.owl-prev {
+    left: 0;
 }
-.carousel-indicators .active{
-    color: white;
+.owl-next {
+    right: 0;
 }
-li{
-    font-size:x-large;
+.img-carrusel{
+    position: relative;
 }
-.aux{
-    height: 40vh;
+.content-screen{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    z-index: 2;
 }
-img.d-block{
-    object-fit: cover;
-    height: 200px;
-    
+.outerborder{
+    background-color: var(--main-screen-bg-color);
+    height: 41.5vw;
+    width: 81.5vw;
+    max-width: 420px ;
+    max-height: 250px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-a {
-    text-decoration: none;
+.cardHome{
+    height: 98%;
+    width: 98%;
+    background-color: var(--main-screen-bg-color);
+    color: var(--main-carusel-bg-color);
+    border: 1px solid var(--footer-text-active-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
-.carousel-control-next{
-    transition:5s ease-in-out left;
+.btn.como-comprar{
+    background-color: var(--footer-text-active-color);
+    position: absolute;
+    top:89%
 }

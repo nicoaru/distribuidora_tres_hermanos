@@ -1,0 +1,26 @@
+:root {
+    --iconoContainer-bg-color: #F3F4EF;
+    --iconoContainer-text-color: #283333;
+    --iconoContainer-text-active-color: #D5A322;
+    --iconoContainer-text-hover-color: whitesmoke;
+}
+/* Times New Roman font main text */
+.iconos-conotainer{
+    background-color: var(--iconoContainer-bg-color);
+    padding: 2rem;
+}
+
+@media (min-width: 800px) {
+    .iconos-conotainer{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+
+}
+
+
+
+

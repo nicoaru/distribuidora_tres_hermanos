@@ -1,0 +1,34 @@
+:root {
+    --descargaPDF-bg-color: #283333;
+    --descargaPDF-text-color: #FFFFFF;
+    --descargaPDF-text-active-color: #D5A322;
+    --descargaPDF-text-hover-color: whitesmoke;
+}
+
+.main-descarga-div{
+    background-color: var(--descargaPDF-bg-color);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+}
+.text-div{
+    
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: var(--descargaPDF-text-color);
+    padding: 1rem;
+}
+.btn.btn-light{
+    width: 80%;
+}
+
+
+@media (min-width: 760px) {
+    .btn.btn-light{
+        width: 25%;
+    }
+
+}
