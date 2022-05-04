@@ -1,0 +1,15 @@
+:root{
+    --filtro-bg-color: #283333;
+    --filtro-text-color: #FFFFFF;
+    --filtro-text-active-color: #D5A322;
+    --filtro-text-hover-color: whitesmoke;
+}
+
+.btn.filtro{
+    margin: 1rem;
+    border: 1px solid var(--filtro-text-active-color);
+    color: var(--filtro-text-active-color);
+}
+.btn.filtro i{
+    padding-left: 1rem;
+}

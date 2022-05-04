@@ -1,14 +1,14 @@
 import React from 'react'
 import './productList.css'
 import { ProductConsumer } from '../../context/ProductProvider'
-import { ItemProducto } from '../itemProducto/itemProducto';
+import ItemParaPag from '../itemProductoPagina/ItemParaPag';
 
 const ProductList = () => {
     const { listaProductos, imagenes } = ProductConsumer();
     return (
-        <div>
+        <div className='productos-contenedor'>
             {listaProductos.map((element, id) => {
-                return <ItemProducto key={id} producto={element}></ItemProducto>
+                return <ItemParaPag key={id} producto={element}></ItemParaPag>
             })}
         </div>
     )

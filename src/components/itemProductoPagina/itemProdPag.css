@@ -1,0 +1,27 @@
+:root {
+   --footer-bg-color: #283333;
+   --footer-text-color: #FFFFFF;
+   --footer-text-active-color: #D5A322;
+   --footer-text-hover-color: whitesmoke;
+}
+.tarjeta{
+   border-radius: 1rem;
+   margin: 1rem;
+   min-width: 280px;;
+   max-width: 320px;
+}
+.card-img-top{
+   border-radius: 0.8rem;
+   padding: 0.3rem;
+}
+.card-body{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.card-text-descripcion{
+   font-weight: 600
+}
+.card-text-precio.d5{
+   color: var(--footer-text-active-color);
+}
