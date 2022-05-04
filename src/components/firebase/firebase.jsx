@@ -18,7 +18,7 @@ const firebaseConfig = {
     appId: "1:1019902829199:web:21930038d5a33dc99c46fa",
     measurementId: "G-2ZKXD3TEBH"
 };
-/*Inicializacion de Firebase, es decir me conecto con Firebase*/
+/*Inicializacion de Firebase, me conecto con Firebase*/
 const firebaseApp = initializeApp(firebaseConfig);
 
 /*Genero la referencia a la base de datos creada en el servicio Firestore*/
