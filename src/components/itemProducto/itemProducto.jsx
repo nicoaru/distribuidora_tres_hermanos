@@ -4,7 +4,7 @@ import './itemProducto.css'
 
 
 
-function ItemProducto({producto}) {
+function ItemProducto({ producto }) {
 
     console.log("Producto recibido: ", producto)
     // let producto = {
@@ -14,10 +14,10 @@ function ItemProducto({producto}) {
     //     cantidadVenta: 'el kg',
     //     imgUrl:productoEjemplo1}
 
-    return(
+    return (
         <div className="item d-flex justify-content-center">
             <div className="card justify-content-center d-flex flex-column align-content-center">
-                <img src={producto.imgUrl} className="card-img-top" alt={`${producto.nombre} ${producto.marca}`}/>
+                <img src={producto.imgUrl} className="card-img-top" alt={`${producto.nombre} ${producto.marca}`} />
                 <div className="p-0 card-body d-flex flex-column justify-content-center align-content-center">
                     <p className="card-subTitle">{producto.marca}</p>
                     <h5 className="card-title">{producto.nombre}</h5>

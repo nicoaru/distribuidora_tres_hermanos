@@ -9,7 +9,7 @@
 }
 
 .main-carusel-div img{
-    height: 80vh;
+    /* height: 80vh; */
    object-fit: cover;
 }
 
@@ -53,6 +53,7 @@
     align-items: center;
 }
 .cardHome{
+    padding:3px;
     height: 98%;
     width: 98%;
     background-color: var(--main-screen-bg-color);
@@ -68,4 +69,7 @@
     background-color: var(--footer-text-active-color);
     position: absolute;
     top:89%
+}
+.cardHome p{
+    font-size: small;
 }
