@@ -21,7 +21,7 @@ function PruebaDB() {
 
     }, [])
 
-    const itemProductos = productosQueryDB.map(prod => (<div><h5>{prod.marca}</h5>
+    const itemProductos = productosQueryDB.map((prod, index) => (<div key={index}><h5>{prod.marca}</h5>
                                                         <h3>{prod.nombre}</h3>
                                                         <h5>{prod.precio}</h5>
                                                     </div>))
