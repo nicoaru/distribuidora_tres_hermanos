@@ -50,6 +50,9 @@ function NavBar() {
                         <NavLink onClick={reset} className='link' to='/contacto'>
                             <p className='d5' >CONTACTO</p>
                         </NavLink>
+                        <NavLink onClick={reset} className='link' to='/editar'>
+                            <p className='d5' >Editar</p>
+                        </NavLink>
                     </div>
                 </div>
             </nav >

@@ -7,7 +7,7 @@ const DropDownBtn = () => {
             <div className="dropdown">
                 <button className="btn filtro" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Filtro
-                    <i class="fa-solid fa-caret-down"></i>
+                    <i className="fa-solid fa-caret-down"></i>
                 </button>
                 <div className="dropdown-menu" aria-labelledby="dropdownMenu2">
                     <button className="dropdown-item" type="button">Precio menor a mayor</button>

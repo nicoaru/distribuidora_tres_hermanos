@@ -7,9 +7,9 @@ const FiltroTick = ({ titulo, datos }) => {
             <p className='titulo-filtro'>
                 {titulo}
             </p>
-            {datos.map(element => {
+            {datos.map((element, idx) => {
                 return (
-                    <label className='opciones-filtro' >
+                    <label key={idx} className='opciones-filtro' >
                         <input className="mx-2" type="checkbox" />
                         {element}
                     </label>

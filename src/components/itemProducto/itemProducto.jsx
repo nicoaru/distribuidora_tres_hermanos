@@ -5,8 +5,6 @@ import './itemProducto.css'
 
 
 function ItemProducto({ producto }) {
-
-    console.log("Producto recibido: ", producto)
     // let producto = {
     //     nombre: 'Muzzarella',
     //     marca: 'Puyehue',
@@ -22,7 +20,7 @@ function ItemProducto({ producto }) {
                     <p className="card-subTitle">{producto.marca}</p>
                     <h5 className="card-title">{producto.nombre}</h5>
                     <h6 className="card-price">{`$${producto.precio} ${producto.cantidadVenta}`}</h6>
-                    <a href="#" class="card-button">Ver detalles</a>
+                    <a href="" className="card-button">Ver detalles</a>
                 </div>
             </div>
         </div>
