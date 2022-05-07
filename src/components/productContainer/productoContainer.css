@@ -1,3 +1,39 @@
-.outer-productos{
-    
+.filtro-casillas{
+    display: none;
 }
+@media (min-width: 776px) {
+    .filtro-casillas{
+        margin-left: 1rem;
+        padding: 0 1rem 1rem 1rem;
+        display: flex;
+        flex-direction: column;
+        width: 30vw;
+        min-width: 250px;
+        max-width: 300px;
+        align-content: flex-start;
+    }
+    .productos-container{
+        display: flex;
+        position: relative;
+    }
+    .filtros{
+        width: 35vw;
+        max-width: 300px;
+    }
+    .acordiones-filtros{
+        display:none;
+    }
+    .filtros{
+        background-color: white;
+        position: absolute;
+        top:-1rem;
+        left: 80%;
+        z-index: 101;
+    }
+    .outer-productos{
+        margin-top: 1.5rem;
+    }
+
+}
+
+
