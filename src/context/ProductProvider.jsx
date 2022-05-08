@@ -20,21 +20,28 @@ const ProductProvider = ({ children }) => {
     const [listadoVariables, setListadoVariables] = useState([])
 
     const [productosQueryDB, setproductosQueryDB] = useState([])
+    const [edicionTexto, setEdicionTexto] = useState([])
+    const [edicionDeDatos, setEdicionDeDatos] = useState([])
 
-    const getData = async () => {
-        const querySnapshot = await getDocs(collection(db, "productos"));
+    const getData = async (productos = 'productos') => {
+        const querySnapshot = await getDocs(collection(db, productos));
         const productosTemp = querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
-        //console.log(productosTemp)
-        const orderedProducts = productosTemp.sort((a, b) => a.date - b.date)
-        //console.log(orderedProducts)
-        setproductosQueryDB(orderedProducts);
+        const orderedList = productosTemp.sort((a, b) => a.date - b.date)
+        //console.log(orderedList)
+        return orderedList;
     }
 
     useEffect(() => {
-        getData()
+        getData().then(res => setproductosQueryDB(res))
+        getData('textos').then(res => setEdicionTexto(res))
+        getData('datos').then(res => setEdicionDeDatos(res))
     }, [])
 
-
+    // useEffect(() => {
+    //     console.log(productosQueryDB)
+    //     console.log(edicionTexto)
+    //     console.log(edicionDeDatos)
+    // }, [productosQueryDB, edicionTexto, edicionDeDatos]);
 
     return (
         <ProductContext.Provider
@@ -42,11 +49,17 @@ const ProductProvider = ({ children }) => {
                 imagenes,
                 setListadoVariables,
                 productosQueryDB,
-                getData
+                setproductosQueryDB,
+                getData,
+                edicionTexto,
+                setEdicionTexto,
+                edicionDeDatos,
+                setEdicionDeDatos
             }}>
             {children}
         </ProductContext.Provider>
     )
 }
+
 
 export default ProductProvider

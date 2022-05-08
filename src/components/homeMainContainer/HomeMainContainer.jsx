@@ -15,11 +15,11 @@ const HomeMainContainer = () => {
 
     return (
         <div>
-            {/* <CarrouselMain /> */}
+            {<CarrouselMain />}
             <IconosContainer />
-            {/* <CarouselProductos /> */}
+            {<CarouselProductos />}
             <DescargarPrecios />
-            {/* <CarouselMarcas /> */}
+            {<CarouselMarcas />}
 
         </div>
     )

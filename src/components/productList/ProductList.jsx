@@ -9,16 +9,11 @@ const ProductList = () => {
 
     useEffect(() => {
         getData()
-        //console.log(productosQueryDB)
     }, []);
     useEffect(() => {
-        if (productosQueryDB.length > 0) {
-            // console.log(productosQueryDB[productosQueryDB.length - 1])
-        }
+        console.log(productosQueryDB)
     }, [productosQueryDB]);
 
-    //console.log(productosQueryDB)
-    //console.log(!productosQueryDB?.data)
     return (
         <>
             {(productosQueryDB.length === 0) && <>
@@ -27,7 +22,7 @@ const ProductList = () => {
                 </div>
             </>}
 
-            {productosQueryDB.length !== 0 && <div className='productos-contenedor'>
+            {productosQueryDB[productosQueryDB.length - 1]?.data && <div className='productos-contenedor'>
                 {productosQueryDB[productosQueryDB.length - 1].data.map((element, id) => {
                     return <ItemParaPag key={id} producto={element}></ItemParaPag>
                 })}
