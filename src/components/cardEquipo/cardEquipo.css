@@ -1,0 +1,45 @@
+.cardEquipo .card {
+    /* width: 240px;
+    height: 325px; */
+    border: initial;
+    border-radius: initial;
+    box-shadow: none;
+    z-index: 100;
+    margin: 5px;
+    background-color: transparent;
+}
+ 
+.cardEquipo .card .card-subTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.cardEquipo .card .card-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #D5A322;
+}
+
+.cardEquipo .card-img-top {
+    width: 187px;
+    height: 187px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+    @media (min-width: 768px) {
+        .cardEquipo .card-img-top {
+            width: 218px;
+            height: 218px;
+        }
+    }

@@ -1,20 +1,20 @@
 
-.owl-nav {
+.carouselProductosContainer .owl-nav {
     position: absolute;
     top: 50%;
     left: 0;
     right: 0;
 }
-.owl-nav .owl-prev, .owl-nav .owl-next {
+.carouselProductosContainer .owl-nav .owl-prev, .carouselProductosContainer .owl-nav .owl-next {
     position: absolute;
     color: inherit;
     background: none;
     border: none;
     z-index: 100;
 }
-.owl-prev {
+.carouselProductosContainer .owl-prev {
     left: 0;
 }
-.owl-next {
+.carouselProductosContainer .owl-next {
     right: 0;
 }

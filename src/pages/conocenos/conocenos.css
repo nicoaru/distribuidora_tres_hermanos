@@ -1,3 +1,76 @@
-.conocenos h1 {
-    color: blueviolet;
+.conocenosPrincipal {
+    color:#2C4545;
+    text-align: left;
+    letter-spacing: 0em;
+    margin-top: 36px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+    @media (min-width: 768px) {
+        .conocenosPrincipal {
+            padding-left: 10% !important;
+            padding-right: 10% !important;
+        }
+    }
+
+.conocenosPrincipal img {
+    width: 100%;
+}
+
+.conocenosPrincipal h2 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.conocenosPrincipal h1 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 34px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.conocenosPrincipal h1 span {
+    text-decoration: 1px underline #D5A322;
+    text-underline-offset: 10px;
+    /* text-underline-position: under; */
+}
+.conocenosPrincipal p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    font-family: 'Montserrat', sans-serif;
+} 
+
+/**/
+
+.conocenosSecudarioEquipo {
+    background-color: #2C4545;
+}
+    @media (min-width: 768px) {
+        .conocenosSecudarioEquipo {
+            height: 480px;
+        }
+    }
+.conocenosSecudarioEquipo>h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 20px;
+    }
+
+.conocenosSecundarioRelleno {
+    background-color: #2C4545;
+    height: 480px;
+}
+
+@media (min-width: 992px) {
+    .conocenosSecundarioImagenes {
+        width: 475px;
+    }
 }
