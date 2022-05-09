@@ -1,11 +1,10 @@
 import React from 'react'
 import './comoComprar.css'
-import { ItemProducto } from '../../components/itemProducto/itemProducto'
-
+import { ComoComprarContainer } from '../../components/comoComprarContainer/comoComprarContainer'
 function ComoComprar() {
     return (
         <div className='comoComprar'>
-            <h1>Pagina Cómo Comprar</h1>
+            <ComoComprarContainer/>
         </div>
     )
 }

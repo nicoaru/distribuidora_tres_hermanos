@@ -1,0 +1,41 @@
+.itemComoComprar2 {
+    display: flex;
+    margin-bottom: 2em;
+}
+.itemComoComprar2 .icono {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    background-color: #D5A322;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.itemComoComprar2 .icono img {
+    width: 60%;
+    height: 60%;
+}
+
+/* .itemComoComprar2 .texto {
+    max-width: 360px;
+} */
+.itemComoComprar2 .itemTitle {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+    .itemComoComprar2 .itemText {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    }
