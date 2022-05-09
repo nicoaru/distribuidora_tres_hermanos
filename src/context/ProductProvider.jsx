@@ -27,7 +27,7 @@ const ProductProvider = ({ children }) => {
         const querySnapshot = await getDocs(collection(db, productos));
         const productosTemp = querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
         const orderedList = productosTemp.sort((a, b) => a.date - b.date)
-        //console.log(orderedList)
+        // console.log(productos, " => ",orderedList)
         return orderedList;
     }
 
@@ -38,7 +38,7 @@ const ProductProvider = ({ children }) => {
     }, [])
 
     // useEffect(() => {
-    //     console.log(productosQueryDB)
+    //     console.log("productosQueryDB => ", productosQueryDB)
     //     console.log(edicionTexto)
     //     console.log(edicionDeDatos)
     // }, [productosQueryDB, edicionTexto, edicionDeDatos]);

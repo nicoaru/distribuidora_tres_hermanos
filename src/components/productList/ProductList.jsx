@@ -7,9 +7,9 @@ import img from '../../img/iconos/Ilustraciones_iconos-05.png'
 const ProductList = () => {
     const { getData, productosQueryDB, imagenes } = ProductConsumer();
 
-    useEffect(() => {
-        getData()
-    }, []);
+    // useEffect(() => {
+    //     getData()
+    // }, []);
     useEffect(() => {
         console.log(productosQueryDB)
     }, [productosQueryDB]);
