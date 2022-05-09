@@ -1,8 +1,13 @@
-import React, { createContext, useContext, useState, useMemo } from 'react';
+import React, { createContext, useContext, useState, useMemo, useEffect } from 'react';
 import azulEmperador from '../img/productos/azulEmperador.jpeg'
 import comboElJuan from '../img/productos/combo-eljuan.jpeg'
 import cremaLacteosCLP from '../img/productos/crema-lacteosCLP.jpeg'
 import cremosoElJuan from '../img/productos/cremoso-eljuan.jpeg'
+
+import { db } from "../../src/components/firebase/firebase";
+import { storage } from "../../src/components/firebase/firebase";
+import { collection, query, orderBy, doc, getDocs, getDoc, limit } from "firebase/firestore";
+
 
 
 const ProductContext = createContext();
@@ -12,49 +17,49 @@ export const ProductConsumer = () => useContext(ProductContext);
 const ProductProvider = ({ children }) => {
 
     const imagenes = [azulEmperador, comboElJuan, cremaLacteosCLP, cremosoElJuan]
+    const [listadoVariables, setListadoVariables] = useState([])
 
+    const [productosQueryDB, setproductosQueryDB] = useState([])
+    const [edicionTexto, setEdicionTexto] = useState([])
+    const [edicionDeDatos, setEdicionDeDatos] = useState([])
 
-    const listaProductos = [{
-        id: 1,
-        nombre: 'Queso 1',
-        precio: '95',
-        descripcion: 'Queso cremoso',
-        cantidadVenta: 'kg',
-        imgUrl: azulEmperador,
-    },
-    {
-        id: 2,
-        nombre: 'Queso 2',
-        precio: '105',
-        descripcion: 'Queso duro',
-        cantidadVenta: 'kg',
-        imgUrl: comboElJuan
-    },
-    {
-        id: 3,
-        nombre: 'Queso 3',
-        precio: '200',
-        descripcion: 'Queso Roque',
-        cantidadVenta: 'kg',
-        imgUrl: cremaLacteosCLP
-    }, {
-        id: 4,
-        nombre: 'Queso 4',
-        precio: '290',
-        descripcion: 'Queso azul',
-        cantidadVenta: 'kg',
-        imgUrl: cremosoElJuan
-    }]
+    const getData = async (productos = 'productos') => {
+        const querySnapshot = await getDocs(collection(db, productos));
+        const productosTemp = querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
+        const orderedList = productosTemp.sort((a, b) => a.date - b.date)
+        //console.log(orderedList)
+        return orderedList;
+    }
+
+    useEffect(() => {
+        getData().then(res => setproductosQueryDB(res))
+        getData('textos').then(res => setEdicionTexto(res))
+        getData('datos').then(res => setEdicionDeDatos(res))
+    }, [])
+
+    // useEffect(() => {
+    //     console.log(productosQueryDB)
+    //     console.log(edicionTexto)
+    //     console.log(edicionDeDatos)
+    // }, [productosQueryDB, edicionTexto, edicionDeDatos]);
 
     return (
         <ProductContext.Provider
             value={{
-                listaProductos,
                 imagenes,
+                setListadoVariables,
+                productosQueryDB,
+                setproductosQueryDB,
+                getData,
+                edicionTexto,
+                setEdicionTexto,
+                edicionDeDatos,
+                setEdicionDeDatos
             }}>
             {children}
         </ProductContext.Provider>
     )
 }
+
 
 export default ProductProvider

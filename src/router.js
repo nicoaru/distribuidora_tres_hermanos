@@ -10,7 +10,8 @@ import { Layout } from "./components/layout/layout";
 import DocumentPDF from "./components/pdf/DocumentPDF.jsx";
 import ListaPrecios from "./components/listadoPrecios/ListaPrecios";
 import ProductProvider from "./context/ProductProvider";
-import { PruebaDB} from "./components/pruebaDB/pruebaDB";
+import { PruebaDB } from "./components/pruebaDB/pruebaDB";
+import EditarDatos from "./components/editarDatos/EditarDatos";
 
 
 function Router() {
@@ -27,6 +28,7 @@ function Router() {
             <Route path="/como_comprar" element={<ComoComprar />} />
             <Route path="/contacto" element={<Contacto />} />
             <Route path="/precios" element={<ListaPrecios />} />
+            <Route path="/editar" element={<EditarDatos />} />
             <Route path="/privado" element={<PruebaDB />} />
             <Route path="/*" element={<PageNotFound />} />
           </Route>

@@ -15,11 +15,11 @@ const ProductContainer = () => {
     return (
         <div className='outer-div'>
             <div className='auxProductoCarrousel'>
-                <CarrouselMain
+                {/* <CarrouselMain
                     heightImg='60vh'
                     tituloPrim={tituloPrim}
                     texto={textoSecu}>
-                </CarrouselMain>
+                </CarrouselMain> */}
             </div>
 
             <div className='productos-container'>

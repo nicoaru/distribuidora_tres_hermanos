@@ -9,16 +9,17 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 import { NavLink } from 'react-router-dom';
 
 
-const CarrouselMain = ({ heightImg, texto, tituloPrim }) => {
+const CarrouselMain = () => {
 
+    const tituloPrim = '¿Quieres comprar al por mayor?';
+    const texto = 'Encuentra aqui una gran variedad de quesos para tu negocio'
+    const heightImg = '80vh';
 
     let cards = [
-        <img style={{ height: heightImg }} src={img1} />,
-        <img style={{ height: heightImg }} src={img2} />,
-        <img style={{ height: heightImg }} src={img3} />,
+        <img key={1} style={{ height: heightImg }} src={img1} />,
+        <img key={2} style={{ height: heightImg }} src={img2} />,
+        <img key={3} style={{ height: heightImg }} src={img3} />,
     ]
-
-    console.log("Productos: ", cards)
 
     let carouselProdResponsive = {
         0: { items: 1, slideBy: 1, margin: 0 },
@@ -56,13 +57,4 @@ const CarrouselMain = ({ heightImg, texto, tituloPrim }) => {
 
 export default CarrouselMain
 
-{/* <div>
-<div className="container-fluid d-flex justify-content-center my-5">
-    <div className="carouselProductosContainer  col-12 col-sm-8 col-md-10">
-        <OwlCarousel responsive={{ ...carouselProdResponsive }} nav autoplay={false} loop>
-            {cards}
-        </OwlCarousel>
-    </div>
-</div>
-</div> */}
 
