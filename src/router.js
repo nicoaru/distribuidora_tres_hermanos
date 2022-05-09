@@ -12,6 +12,7 @@ import ListaPrecios from "./components/listadoPrecios/ListaPrecios";
 import ProductProvider from "./context/ProductProvider";
 import { PruebaDB } from "./components/pruebaDB/pruebaDB";
 import EditarDatos from "./components/editarDatos/EditarDatos";
+import UploadImg from "./components/uploadImg/UploadImg";
 
 
 function Router() {
@@ -29,6 +30,7 @@ function Router() {
             <Route path="/contacto" element={<Contacto />} />
             <Route path="/precios" element={<ListaPrecios />} />
             <Route path="/editar" element={<EditarDatos />} />
+            <Route path="/img" element={<UploadImg />} />
             <Route path="/privado" element={<PruebaDB />} />
             <Route path="/*" element={<PageNotFound />} />
           </Route>
