@@ -1,0 +1,33 @@
+.field{
+    background-color: green;
+    height: 20rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.ball{
+    height: 10rem;
+    background-color: red;
+    width: 10rem;
+    border-radius: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:x-large;
+    transform: scale(1);
+    transform:translateX(-50rem);
+    transform: scale(1);
+    transform:translateX(-50rem);
+    transform: scale(3);
+
+    transition: 1s ease-in;
+}
+.finish{
+    height: 10rem;
+    background-color: black;
+    width: 2rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

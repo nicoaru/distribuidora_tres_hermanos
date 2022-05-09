@@ -53,6 +53,9 @@ function NavBar() {
                         <NavLink onClick={reset} className='link' to='/editar'>
                             <p className='d5' >Editar</p>
                         </NavLink>
+                        <NavLink onClick={reset} className='link' to='/img'>
+                            <p className='d5' >img</p>
+                        </NavLink>
                     </div>
                 </div>
             </nav >
