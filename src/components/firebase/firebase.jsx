@@ -6,6 +6,8 @@ import { getFirestore } from 'firebase/firestore'
 /*En este caso Storage, especificamente el modulo getStorage*/
 import { getStorage } from 'firebase/storage'
 
+import { getAuth } from 'firebase/auth'
+
 /*Luego agregar CloudStorage y FirebaseAuthentication*/
 
 /*Creacion del objeto con los datos de configuracion de Firebase*/
@@ -28,4 +30,7 @@ const db = getFirestore(firebaseApp)
 /*Genero la referencia al bucket creado en el servicio Storage, para luego crear referencias especificas*/
 const storage = getStorage(firebaseApp);
 
-export { db, storage }
+/*Genero la referencia a la autenticacion de usuario, para luego crear referencias especificas*/
+const auth = getAuth(firebaseApp);
+
+export { db, storage, auth }

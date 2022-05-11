@@ -19,6 +19,7 @@
     z-index: 1;
 }
 .navBar {
+    
     min-width: 100%;
     background-color: var(--main-bg-color);
     color: var(--main-text-color);
@@ -29,7 +30,7 @@
     
 }
 .navbar.navbar-expand-lg.navbar-light{
-    padding: 1rem;
+    padding: 0.9rem;
     min-width: 100%;
     display: flex;
 }
@@ -80,19 +81,12 @@ ul {
     flex-direction: column;
     justify-content: space-evenly;
 }
-li {
-    
-    list-style: none;
-    padding: 0px 20px;
-    
-}
+
 .link {
     text-decoration: none;
     color: inherit;
     display: flex;
     margin-top: 4vw;
-
-    
 }
 .link p{
     margin: 0;
@@ -115,6 +109,21 @@ li {
     border-bottom-style: solid;
 }
 
+.log-out-button{
+    z-index: 100;
+    position: fixed;
+    left: 50%;
+    top: 3vh;
+    border-radius: 1vw;
+    background-color: transparent;
+    border: none;
+    width: 100px;
+    border-bottom: 1px solid rgb(180, 180, 180);
+}
+.log-out-button:hover{
+    background-color: var(--main-text-active-color);
+}   
+
 @media (min-width: 992px) {
 
     .link{
@@ -127,5 +136,15 @@ li {
     .navbar-brand{
         top:0.20rem;
         padding-top: 0.1rem;
+    }
+    .log-out-button{
+        z-index: 100;
+        position: fixed;
+        left: 92%;
+        top: 2vh;
+        background-color: var(--main-bg-color);
+        width: 8vw;
+        
+   
     }
 }
