@@ -1,16 +1,17 @@
-import React, { useState, useEffect } from 'react'
-import * as xlsx from 'https://unpkg.com/xlsx/xlsx.mjs';
+import React, { useEffect } from 'react'
 import { ProductConsumer } from '../../context/ProductProvider';
 import './editarDatos.css'
-import { db } from "../../components/firebase/firebase";
-import { storage } from "../../components/firebase/firebase";
-import { collection, doc, getDocs, getDoc, addDoc, deleteDoc, orderBy, query } from "firebase/firestore";
-import { getMetadata } from 'firebase/storage';
+
 import Editor from '../componenteEditor/Editor';
 
 const EditarDatos = () => {
 
-    const { productosQueryDB, edicionDeDatos, edicionTexto } = ProductConsumer()
+    const { productosQueryDB, edicionDeDatos, edicionTexto, getProductsText, getRest } = ProductConsumer()
+
+    useEffect(() => {
+        getProductsText();
+        getRest();
+    }, []);
 
     return (
         <>

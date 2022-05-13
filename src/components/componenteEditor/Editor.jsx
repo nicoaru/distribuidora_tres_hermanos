@@ -5,7 +5,6 @@ import './editorStyle.css'
 import { db } from "../../components/firebase/firebase";
 import { storage } from "../../components/firebase/firebase";
 import { collection, doc, getDocs, getDoc, addDoc, deleteDoc, orderBy, query } from "firebase/firestore";
-import { getMetadata } from 'firebase/storage';
 
 
 
@@ -87,8 +86,9 @@ const Editor = ({ titulo, coleccion, id }) => {
 
 
     const handleAdd = () => {
-        console.log(data)
-        if (data[data.length - 1]?.tipo === coleccion) {
+        console.log(data[data.length - 1]?.__EMPTY_2)
+        console.log(coleccion)
+        if (data[data.length - 1]?.__EMPTY_2 === coleccion) {
             //deleteDoc()
             addItem()
         } else {

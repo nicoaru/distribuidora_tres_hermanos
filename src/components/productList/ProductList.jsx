@@ -5,14 +5,12 @@ import ItemParaPag from '../itemProductoPagina/ItemParaPag';
 import img from '../../img/iconos/Ilustraciones_iconos-05.png'
 
 const ProductList = () => {
-    const { getData, productosQueryDB, imagenes } = ProductConsumer();
+    const { productosQueryDB, imagenes, getProductsText, getImagenes, imagenes2 } = ProductConsumer();
 
-    // useEffect(() => {
-    //     getData()
-    // }, []);
     useEffect(() => {
-        console.log(productosQueryDB)
-    }, [productosQueryDB]);
+        productosQueryDB.length < 1 && getProductsText();
+        imagenes.length < 1 && getImagenes();
+    }, [])
 
     return (
         <>
@@ -22,9 +20,9 @@ const ProductList = () => {
                 </div>
             </>}
 
-            {productosQueryDB[productosQueryDB.length - 1]?.data && <div className='productos-contenedor'>
+            {productosQueryDB[productosQueryDB.length - 1]?.data && imagenes2.length > 6 && <div className='productos-contenedor'>
                 {productosQueryDB[productosQueryDB.length - 1].data.map((element, id) => {
-                    return <ItemParaPag key={id} producto={element}></ItemParaPag>
+                    return <ItemParaPag key={id} producto={element} img2={imagenes2[element.__EMPTY_3]} ></ItemParaPag>
                 })}
             </div>}
         </>

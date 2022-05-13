@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { storage } from '../firebase/firebase';
-import { getDownloadURL, ref, uploadBytesResumable, listAll } from 'firebase/storage';
+import { getDownloadURL, ref, uploadBytes, listAll, deleteObject } from 'firebase/storage';
+import { ProductConsumer } from '../../context/ProductProvider'
 import { axios } from 'axios'
 import './test.css'
 
@@ -9,109 +10,81 @@ const UploadImg = () => {
 
     //console.log(storage)
     let [opcionesTest, setOpcinoesTest] = useState()
-    let [file, setFile] = useState('');
+    let [file, setFile] = useState([]);
     let [img, setImg] = useState([])
+    let [idDelete, setIdDelete] = useState('')
     const [urlImg, setUrlImg] = useState([])
+    const { imagenes, getImagenes } = ProductConsumer()
 
-
+    //"https://firebasestorage.googleapis.com/v0/b/distribuidora-3-hermanos.appspot.com/o/productos%2F-3-%20Queso%20Port%20Salut%20-%20El%20Juan%20(1).png?alt=media&token=4b366afc-6320-4527-bbc1-1a324412dc68"
     useEffect(() => {
-        console.log(file)
+        //console.log(file)
     }, [file]);
 
-    //remember that the image has to coincide with the prodcut. image name is very important
-    // use split to get image name!
-
-    // get the image first.
-    const look = () => {
-        //const imgPath = '//b/distribuidora-3-hermanos.appspot.com/produtos/azulEmperador.jpeg'
-        //const imgPath = 'gs://distribuidora-3-hermanos.appspot.com/produtos/azulEmperador.jpeg'
-        const folderPath = 'produtos/'
-        //const imgRef = ref(storage, imgPath)
-        //console.log(folderRef)
-        const getUrl = async () => {
-            const folderRef = await listAll(ref(storage, folderPath))
-            console.log(folderRef)
-            return (folderRef.items)
-            //const imgRef = ref(storage, imgPath)
-            //try {
-            //    const url = await getDownloadURL(imgRef)
-            //    return url
-            //} catch (error) {
-            //    console.log(error)
-            //}
-
+    useEffect(() => {
+        if (imagenes.length < 1) {
+            getImagenes()
         }
-        //getUrl().then(res => console.log(res))
-        getUrl()
-            .then(res => {
-                let aux = [];
-                res.forEach(element => {
-                    aux.push('gs://' + element._location.bucket + '/' + element._location.path_)
-                });
-                return aux
-            }).then(res => {
-                let aux = [];
-                for (const i of res) {
-                    console.log(i)
-                    //getImgUrl(i).then(resp => console.log(resp))
-                    getImgUrl(i).then(resp => {
-                        aux.push(resp)
-                        console.log(resp)
-                        //console.log(aux)
-                        setUrlImg([...aux])
-                    })
-                    console.log(aux)
-                    //setUrlImg([...aux])
-                }
-            }).catch(err => console.log(err))
+    }, []);
 
-        //alt=media&token=4d6b0707-efe3-4690-9f
-        const getImgUrl = async (path) => {
-            const imgRef = ref(storage, path)
-            const url = await getDownloadURL(imgRef)
-            return url
-        }
-    }
 
     useEffect(() => {
-        console.log(urlImg)
+        //console.log(urlImg)
     }, [urlImg]);
 
 
     // upload the image second
     const upload = () => {
-
-        for (const path of file) {
-            const refPath = 'produtos/';
-            const metadata = {
-                contentType: path.type
+        if (file.length === 0) {
+            alert('se debe seleccionar un archivo')
+        } else {
+            for (const path of file) {
+                const refPath = 'productos/';
+                const metadata = {
+                    contentType: path.type
+                }
+                // console.log(file)
+                const imgRef = ref(storage, refPath + path.name)
+                uploadBytes(imgRef, path)
+                    .then((snapshot) => {
+                        console.log('Uploaded', snapshot, 'bytes.');
+                        console.log('File metadata:', snapshot.metadata);
+                    }).catch(err => console.log(err))
             }
-            const imgRef = ref(storage, refPath + path.name)
-            uploadBytesResumable(imgRef, file, metadata)
-                .then((snapshot) => {
-                    console.log('Uploaded', snapshot.totalBytes, 'bytes.');
-                    console.log('File metadata:', snapshot.metadata);
-                }).catch(err => console.log(err))
+            console.log('upload ejecutado')
         }
-        console.log('upload ejecutado')
+
     }
 
     // delete the image third
 
+    const deleteImg = async () => {
+        const deleteFile = async () => {
+            //console.log(idDelete)
+            const aux = imagenes.filter(imagen => imagen.id == idDelete)
+            // console.log(aux)
+            if (aux.length === 0) {
+                alert('Ese id de producto no tiene imagen asociada.')
+            } else {
+                const imgRef = ref(storage, aux[0].path)
+                deleteObject(imgRef).then(res => console.log(res))
+                getImagenes()
+            }
+        }
+        await deleteFile()
+    }
+    //"gs://distribuidora-3-hermanos.appspot.com/productos/-10- Queso Fynbo - Puyehue (1).png"
+    const auxTexting = 'gs://distribuidora-3-hermanos.appspot.com/produtos/-The name-azulEmperador.jpeg'
+    //console.log(auxTexting.split('-')[3])
+
     return (
         <div>
-            <input type="file" className="form-control m-3 w-75" onChange={e => setFile([...e.target.files])} multiple id="photo" />
+            <input type="file" className="form-control m-3 w-75" accept="image/png, image/jpeg" onChange={e => setFile([...e.target.files])} multiple id="photo" />
             <button onClick={upload} className='btn btn-success m-3'>Upload img</button>
-            <button onClick={look} className='btn btn-success m-3'>Look at img</button>
-            {!urlImg && <h5>No img yet!</h5>}
-            {urlImg && <img src={urlImg[1]} />}
+            <input type="text" name='id' onChange={(e) => setIdDelete(e.target.value)} placeholder='id Producto' value={idDelete} />
+            <button onClick={deleteImg} className='btn btn-success m-3'>Delete Img</button>
 
-            {urlImg && urlImg.map((imagen, idx) => <img src={imagen} key={idx} />)}
-
-
-
-        </div>
-    )
+        </div>)
 }
 
 export default UploadImg

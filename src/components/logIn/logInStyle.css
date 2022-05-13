@@ -1,0 +1,39 @@
+.main-log-in{
+height: 90vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.log-in-box{
+height: 50vh;
+width: 50vh;
+background-color: darkslategrey;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 0 2rem;
+}
+.form-inputs{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 40vh;
+    width: 40vh;
+    border: 1px solid white;
+    border-radius: 0 2rem;
+}
+.form-inputs input{
+    margin: 1rem;
+}
+.btn.submit-button{
+    margin-top: 1rem;
+    background-color: white;
+}
+.btn.log-out-button{
+    position: absolute;
+    top: 5%;
+    left: 80%;
+}
+
