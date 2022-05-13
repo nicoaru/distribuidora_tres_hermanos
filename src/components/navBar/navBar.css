@@ -15,7 +15,7 @@
     color: var(--main-text-color);
     position: absolute;
     left: 3%;
-    top:0.8rem;
+    top: 0.8rem !important;
     z-index: 1;
 }
 .navBar {
@@ -25,8 +25,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 8px 4px 4px #bec4c4;
-    
+    box-shadow: 0px 4px 4px #bec4c4;
 }
 .navbar.navbar-expand-lg.navbar-light{
     padding: 1rem;

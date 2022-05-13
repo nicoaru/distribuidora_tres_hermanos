@@ -18,9 +18,9 @@
 .imagenes{
     background-color: var(--icono-bg-color);
     height: 20vw;
-    max-height: 150px;
+    max-height: 100px;
     width: 20vw;
-    max-width: 150px;
+    max-width: 100px;
     border-radius: 50%;
     overflow: hidden;
     display: flex;
@@ -29,19 +29,34 @@
 }
 .imagenes img{
     object-fit: contain;
-    height: 20vw;
-    height: 20vw;
-    max-height: 8rem ;
-    max-width: 8rem;
+    height: 80%;
+    height: 80%;
     border-radius: 50%;
 }
 /* Montserrat font normal text */
 .textos{
     color: var(--iconos-text-color);
-    padding-top: 3rem;
+    padding-top: 1.5rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
-
+.textos h4 {
+    font-family: 'Times New Roman', times, serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #2C4545;
+}
+.textos p {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #000000;
+}

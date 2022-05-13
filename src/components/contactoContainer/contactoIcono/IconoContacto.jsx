@@ -5,14 +5,14 @@ const IconoContacto = ({ datoPrincipal, datoSecundario, icono }) => {
     console.log(icono)
     //const [iconState, setIconState] = useState(icono)
     return (
-        <div className='todoIconos'>
+        <div className='todoIconos d-flex align-items-center mb-5'>
 
             <div className='iconoIconos'>
                 <i className={icono}></i>
             </div>
-            <div className='textIconos'>
-                <h6>{datoPrincipal}</h6>
-                <p>{datoSecundario}</p>
+            <div className='textIconos ms-3'>
+                <h6 className='mb-1'>{datoPrincipal}</h6>
+                <p className='mb-0'>{datoSecundario}</p>
             </div>
         </div>
     )

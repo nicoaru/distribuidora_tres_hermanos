@@ -5,23 +5,58 @@
     --footer-text-hover-color: whitesmoke;
 }
 .footer{
-    padding: 2rem;
+    height: 282px;
     width: 100%;
     text-align: center;
+    background-image: url('../../img/iconos/fondoFooterMobile.png');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: var(--footer-bg-color);
-    text-decoration: noe;
+    text-decoration: none;
     color: var(--footer-text-color) 
 }
-.logo-div{
-    position: absolute;
-    left:50%;
-    transform: translate(-50%);
+    @media (min-width: 768px) {
+        .footer {
+            height: 120px;
+            background-image: none;
+        }
+    }
+.main-footer-container {
+    height: 100%;
 }
 
 .logo-brand{
     text-decoration: none;
     color: var(--footer-text-color)
 }
+.footer-iconos img{
+    height: 45px;
+    width: 45px;    
+}
+
+@media (min-width: 768px) {
+    .iconos-div {
+        position: absolute;
+        right: 50px;
+    }
+    .footer-iconos img{
+        height: 35px;
+        width: 35px;    
+    }
+}
+
+
+/*
+.logo-div{
+    position: absolute;
+    left:50%;
+    transform: translate(-50%);
+}
+*/
+
+
+/*
 .logo-brand:hover{
     text-decoration: none;
     color: var(--footer-text-active-color)
@@ -31,12 +66,7 @@
     flex-direction: column;
     color: var(--footer-text-color)
 }
-.footer-iconos i{
-    color: var(--footer-text-color);
-    padding: 2rem 2rem 2rem 2rem;
-    transform: scale(2);
-    
-}
+
 .footer-iconos i:hover{
     color: var(--footer-text-active-color)
 }
@@ -64,5 +94,5 @@
    
     
 
-}
+} */
 

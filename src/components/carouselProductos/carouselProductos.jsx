@@ -4,8 +4,8 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import { ItemProducto } from "../itemProducto/itemProducto";
-import img from '../../img/iconos/Ilustraciones_iconos-05.png'
-
+import img from '../../img/iconos/Ilustraciones_iconos-05.png';
+import { BotonLink } from "../botonLink/botonLink";
 
 function CarouselProductos({ productosParaMostrar }) {
  
@@ -28,11 +28,19 @@ function CarouselProductos({ productosParaMostrar }) {
                     </div>
                 </div> 
                 :
-                <div className="container-fluid d-flex justify-content-center my-5">
-                    <div className="carouselProductosContainer  col-12 col-sm-8 col-md-10">
-                        <OwlCarousel responsive={{ ...carouselProdResponsive }} nav autoplay={false} loop>
-                            {cardsJSX}
-                        </OwlCarousel>
+                <div className="carouselProductosContainer my-5">
+                    <div className="titleContainer">
+                        <h1 className="carouselProductosTitle">Favoritos</h1>
+                    </div>
+                    <div className="container-fluid d-flex justify-content-center mt-5">
+                        <div className="col-12 col-sm-8 col-md-10">
+                            <OwlCarousel responsive={{ ...carouselProdResponsive }} nav autoplay={false} loop>
+                                {cardsJSX}
+                            </OwlCarousel>
+                        </div>
+                    </div>
+                    <div className="d-flex justify-content-center mt-4">
+                        <BotonLink texto={'VER MAS PRODUCTOS'} to={'/productos'}/>
                     </div>
                 </div>
 

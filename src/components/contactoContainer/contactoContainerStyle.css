@@ -8,13 +8,16 @@
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
+    background-image: url('../../img//iconos/fondoContacto.png');
+    background-position: right center;
+    background-repeat: no-repeat;
 }
 
 .img.col-12.col-md-4{
     background-color: #283333;
     filter: brightness(40%);
     object-fit: cover;
-    max-height: 500px;
+    /* max-height: 500px; */
 }
 .divAux.col-12.col-md-4{
     position: relative;
@@ -28,22 +31,29 @@
     width: 100%;
 }
 .redes{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   color: var(--contacto-text-active-color);
-   
-
+   /* color: var(--contacto-text-active-color); */
+}
+.redes p {
+    font-family: 'Times New Roman';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #D5A322;
 }
 .redesIconos{
     display: flex;
+}
+
+.redesIconos a {
+    color: #D5A322;
 
 }
-.redesIconos p i{
-    margin: 0 0 0 2rem;
-    display: flex;
-    align-items: flex-end;
-}
+/* .redesIconos p i{
+    height: 40px;
+    width: 40px;
+} */
 
 
 @media (min-width: 760px) {
@@ -56,7 +66,7 @@
         background-color: pink;
     }
     .img.col-12.col-md-4{
-        max-height: 80vh;
+        /* max-height: 150vh; */
         min-height: 550px;
         object-fit: cover;
         width: 100%;

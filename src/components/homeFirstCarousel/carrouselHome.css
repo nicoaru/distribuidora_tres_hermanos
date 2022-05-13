@@ -6,6 +6,7 @@
 }
 .main-carusel-div{
     background-color: var(--main-carusel-bg-color);
+    margin-top: 6px;
 }
 
 .main-carusel-div img{

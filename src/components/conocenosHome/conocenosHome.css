@@ -1,0 +1,74 @@
+.conocenosHome {
+    background-image: url('../../img//iconos/fondoConocenosHomeMini.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+    @media (min-width: 576px) {
+        .conocenosHome {
+            background-image: url('../../img//iconos/fondoConocenosHome.png');
+            }
+    }       
+
+
+.conocenosHomeImagenes {
+    height: 300px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-self: center;
+    flex-grow: 1;
+}
+.conocenosHomeImagenes img {
+    margin: 5px;
+    max-height: 80%;
+}
+.imgConocenosHome1 {
+    align-self: flex-end; 
+    width: 40%;
+}
+.imgConocenosHome2 {
+    align-self: flex-start;
+    width: 50%;
+}
+    @media (min-width: 576px) {
+        .conocenosHomeImagenes {
+            /* max-width: 365px; */
+            height: 300px;
+        }
+        .imgConocenosHome1 {
+            width: auto;
+        }
+        .imgConocenosHome2 {
+            width: auto;
+        }
+    }
+    @media (min-width: 768px) {
+        .conocenosHomeImagenes {
+            height: 350px;
+        }
+    }
+    @media (min-width: 992px) {
+        .conocenosHomeImagenes {
+            height: 400px;
+        }
+    }
+
+.conocenosHomeTexto h1 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 34px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.conocenosHomeTexto h1 span {
+    text-decoration: 1px underline #D5A322;
+    text-underline-offset: 10px;
+}
+.conocenosHomeTexto p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    font-family: 'Montserrat', sans-serif;
+} 
+
+/**/

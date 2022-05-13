@@ -6,7 +6,9 @@
 }
 
 .main-descarga-div{
-    background-color: var(--descargaPDF-bg-color);
+    background-color: #2C4545;
+    background-size: cover;
+    background-image: url('../../img/iconos//fondoQuesitosPorMayor.png');
     display: flex;
     justify-content: center;
     flex-direction: column;

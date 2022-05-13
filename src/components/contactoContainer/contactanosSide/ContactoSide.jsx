@@ -10,7 +10,7 @@ const ContactoSide = () => {
 
     return (
         <div className='main-contacto-side'>
-            <h3>Contactanos</h3>
+            <h3 className='mt-3 my-4'>C<span>ontactano</span>s</h3>
             <div className='auxDivContactos'>
                 <IconoContacto datoPrincipal="TELEFONO" datoSecundario="+549*******" icono={tel} />
                 <IconoContacto datoPrincipal="MAIL" datoSecundario="dist@gmail.com" icono={mail} />

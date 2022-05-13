@@ -4,7 +4,6 @@ import Logo from '../logo/Logo';
 // import { CartWidget } from '../../cartWidget/cartWidget';
 import './navBar.css';
 
-
 function NavBar() {
 
     let [burger, setBurger] = useState('fa-solid fa-bars');
@@ -23,7 +22,7 @@ function NavBar() {
     }
 
     return (
-        <div className='navBar'>
+        <div className='navBar py-2'>
             <Logo location='navbar-brand' />
             <nav className="navbar navbar-expand-lg navbar-light">
                 {/* <a className="navbar-brand" href="#">Navbar</a> */}
@@ -39,7 +38,7 @@ function NavBar() {
                             <p className='d5'>HOME</p>
                         </NavLink>
                         <NavLink onClick={reset} className='link' to='/conocenos'>
-                            <p className='d5' className='d5' >CONOCENOS</p>
+                            <p className='d5' >CONOCENOS</p>
                         </NavLink>
                         <NavLink onClick={reset} className='link' to='/productos'>
                             <p className='d5' >PRODUCTOS</p>

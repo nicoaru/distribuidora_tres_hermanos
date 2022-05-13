@@ -22,13 +22,20 @@ function CarouselMarcas() {
 
 
     return(
-        <div className="container-fluid d-flex justify-content-center my-5">
-            <div className="carouselMarcasContainer  col-12 col-sm-10 col-md-8">
-                        <OwlCarousel className="" responsive={{...carouselResponsive}} autoplay={true} autoplayTimeout={2000} autoplayHoverPause={true} loop>
-                            {cards}
-                        </OwlCarousel>
+        <div className="carouselMarcasContainer py-5">
+            <div className="titleContainer">
+                <h1 className="carouselMarcasTitle">Marcas</h1>
             </div>
+            <div className="container-fluid d-flex justify-content-center mt-5">
+                <div className="col-12 col-sm-10 col-md-8">
+                            <OwlCarousel className="" responsive={{...carouselResponsive}} autoplay={true} autoplayTimeout={2000} autoplayHoverPause={true} loop>
+                                {cards}
+                            </OwlCarousel>
+                </div>
+            </div>
+
         </div>
+
 
     )
 }

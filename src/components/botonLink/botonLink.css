@@ -1,0 +1,30 @@
+.botonComponent {
+    background-color: rgba(213, 163, 34, 1);
+    border-radius: 0%;
+    height: 48px;
+    width: fit-content;
+    border: none;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.botonComponent:hover {
+    background-color: rgba(213, 163, 34, .9);
+}
+
+.linkBoton {
+    text-decoration: none;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgb(33, 37, 41);
+}
+
+.linkBoton:hover {
+    color: rgb(33, 37, 41);
+}
