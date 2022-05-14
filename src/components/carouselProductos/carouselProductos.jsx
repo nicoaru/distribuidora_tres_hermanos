@@ -7,20 +7,26 @@ import { ItemProducto } from "../itemProducto/itemProducto";
 import img from '../../img/iconos/Ilustraciones_iconos-05.png';
 import { BotonLink } from "../botonLink/botonLink";
 
-function CarouselProductos({ productosParaMostrar, carouselTitle }) {
+function CarouselProductos({ productosQuery, imagenes2, carouselTitle }) {
  
     let cardsJSX
-    if (productosParaMostrar.length !== 0) {
-        cardsJSX = productosParaMostrar[productosParaMostrar.length - 1].data.map((obj, index) => {
-            return <ItemProducto producto={obj} key={index} />})        
-    }
+    // if (productosParaMostrar.length !== 0) {
+    //     cardsJSX = productosQuery[productosQuery.length - 1].data.map((obj, index) => {
+    //         return <ItemProducto producto={obj} key={index} />})        
+    // }
+
+    productosQuery[productosQuery.length - 1]?.data && imagenes2.length > 6 && 
+    (cardsJSX = productosQuery[productosQuery.length - 1].data.map((element, id) => {
+        return <ItemProducto key={id} producto={element} img2={imagenes2[element.__EMPTY_3]} ></ItemProducto>
+    }))
+    
 
     // Propiedades responsive del carousel
     let carouselProdResponsive = { 0: { items: 1, slideBy: 1, margin: 0 }, 768: { items: 2, slideBy: 2, margin: 0 }, 992: { items: 3, slideBy: 3, margin: 50 }, 1200: { items: 3, slideBy: 3, margin: 80 } }
 
     return (
         <>
-            {(productosParaMostrar.length === 0) 
+            {(productosQuery.length === 0) 
                 ? 
                 <div className="container-fluid d-flex justify-content-center my-5" style={{height:250}}>
                     <div className="spinner-grow" role="status">
