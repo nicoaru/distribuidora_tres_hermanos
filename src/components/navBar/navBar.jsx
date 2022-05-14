@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { AuthConsumer } from '../../context/AuthProvider';
 import { auth } from '../firebase/firebase';
 import { onAuthStateChanged } from 'firebase/auth';
-
+import logoImg from '../../img/iconos/tablitaLogo.png'
 import Logo from '../logo/Logo';
 // import { CartWidget } from '../../cartWidget/cartWidget';
 import './navBar.css';
@@ -49,6 +49,10 @@ function NavBar() {
                 <div>
                     <Logo location='navbar-brand' />
                 </div>
+                <div className='logoImg'>
+                    <img src={logoImg} alt="logo image"/>
+                </div>
+
                 <nav className="navbar navbar-expand-lg navbar-light">
                     {/* <a className="navbar-brand" href="#">Navbar</a> */}
                     <div className='logoContainer'>

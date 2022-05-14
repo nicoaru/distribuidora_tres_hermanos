@@ -49,7 +49,7 @@ function CarouselEquipo() {
 
         <div className="container-fluid d-flex justify-content-center mt-5">
             <div className="carouselEquipoContainer  col-12">
-                <OwlCarousel nav autoplay={false} loop items={1} slideBy={1} margin={0}>
+                <OwlCarousel nav autoplay={true} autoplayTimeout={2500} loop items={1} slideBy={1} margin={0}>
                     {cards}
                 </OwlCarousel>
             </div>

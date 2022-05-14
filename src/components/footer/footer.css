@@ -30,6 +30,9 @@
     text-decoration: none;
     color: var(--footer-text-color)
 }
+.logo-brand:hover {
+    color: var(--footer-text-active-color);
+}
 .footer-iconos img{
     height: 45px;
     width: 45px;    
