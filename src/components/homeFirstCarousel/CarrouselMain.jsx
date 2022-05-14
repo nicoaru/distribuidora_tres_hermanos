@@ -11,8 +11,8 @@ import { NavLink } from 'react-router-dom';
 
 const CarrouselMain = () => {
 
-    const tituloPrim = '¿Quieres comprar al por mayor?';
-    const texto = 'Encuentra aqui una gran variedad de quesos para tu negocio'
+    const tituloPrim = '¿Queres comprar al por mayor?';
+    const texto = 'Encontra aqui una gran variedad de quesos para tu negocio'
     const heightImg = '80vh';
 
     let cards = [

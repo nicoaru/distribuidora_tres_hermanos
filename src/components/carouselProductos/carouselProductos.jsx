@@ -7,7 +7,7 @@ import { ItemProducto } from "../itemProducto/itemProducto";
 import img from '../../img/iconos/Ilustraciones_iconos-05.png';
 import { BotonLink } from "../botonLink/botonLink";
 
-function CarouselProductos({ productosParaMostrar }) {
+function CarouselProductos({ productosParaMostrar, carouselTitle }) {
  
     let cardsJSX
     if (productosParaMostrar.length !== 0) {
@@ -30,7 +30,7 @@ function CarouselProductos({ productosParaMostrar }) {
                 :
                 <div className="carouselProductosContainer my-5">
                     <div className="titleContainer">
-                        <h1 className="carouselProductosTitle">Favoritos</h1>
+                        <h1 className="carouselProductosTitle">{carouselTitle}</h1>
                     </div>
                     <div className="container-fluid d-flex justify-content-center mt-5">
                         <div className="col-12 col-sm-8 col-md-10">

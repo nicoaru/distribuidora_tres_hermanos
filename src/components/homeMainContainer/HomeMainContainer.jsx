@@ -20,7 +20,7 @@ const HomeMainContainer = () => {
         <div className='homeMainContainer'>
             <CarrouselMain />
             <IconosContainer />
-            <CarouselProductos productosParaMostrar={productosQueryDB}/>
+            <CarouselProductos carouselTitle={'Favoritos'} productosParaMostrar={productosQueryDB}/>
             <DescargarPrecios />
             <ConocenosHome/>
             <CarouselMarcas />

@@ -1,35 +1,20 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
 import AcordionFiltro from '../acordionFiltro/AcordionFiltro'
 import DropDownBtn from '../dopDownBtn/DropDownBtn'
 import FiltroTick from '../filtroTick/FiltroTick'
-import CarrouselMain from '../homeFirstCarousel/CarrouselMain'
 import ProductList from '../productList/ProductList'
-import imgPortadaProductos from '../../img/tienda/pexels-engin-akyurt-2531189.jpg'
+import { PortadaProductos } from '../portadaProductos/portadaProductos'
 import './productoContainer.css'
 
 const ProductContainer = () => {
-    const tituloPrim = 'Tienda'
-    const texto = 'Recuerda que para comprar debes enviar tu pedido por mensaje a nuestro Whatsapp'
-    const heightImg = '80vh';
+
 
     const categorias = ['Categoria 1', 'Categoria 2']
     const marcas = ['Marca 1', 'Marca 2']
     return (
         <div className='outer-div'>
             
-            <div className='portadaProductos-container d-flex justify-content-center'>
-                <div className='portadaProductosCard-container'>
-                    <div className='portadaProductosCard-outerborder'>
-                        <div className='portadaProductosCard'>
-                            <h3 className='text-light'>{tituloPrim}</h3>
-                            <p>{texto}</p>
-                            <NavLink className='btn portadaProductosCard-boton' to='/como_comprar'>COMO COMPRAR
-                            </NavLink>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <PortadaProductos/>
 
             <div className='productos-container p-4 p-md-5'>
 
