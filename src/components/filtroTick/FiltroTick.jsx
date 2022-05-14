@@ -3,14 +3,14 @@ import './filtroTick.css'
 
 const FiltroTick = ({ titulo, datos }) => {
     return (
-        <div>
-            <p className='titulo-filtro'>
+        <div className='mt-5'>
+            <p className='titulo-filtro mb-1'>
                 {titulo}
             </p>
             {datos.map((element, idx) => {
                 return (
                     <label key={idx} className='opciones-filtro' >
-                        <input className="mx-2" type="checkbox" />
+                        <input className="ms-1 me-2" type="checkbox" />
                         {element}
                     </label>
                 )

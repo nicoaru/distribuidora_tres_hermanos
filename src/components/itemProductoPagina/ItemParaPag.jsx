@@ -5,7 +5,7 @@ import './itemProdPag.css'
 const ItemParaPag = ({ producto, img2 }) => {
     //console.log(img2)
     return (
-        <div>
+        <div className='d-flex justify-content-center'>
             <div className="tarjeta col-8 col-sm-4">
                 <img className="card-img-top" src={img2} alt="Card image cap" />
                 <div className="card-body">

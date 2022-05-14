@@ -34,7 +34,7 @@ const CarrouselMain = () => {
             <div className="container-fluid d-flex justify-content-center p-0">
                 <div className="carouselMainContainer col-12">
                     <div className='img-carrusel'>
-                        <OwlCarousel responsive={{ ...carouselProdResponsive }} nav autoplay={false} loop>
+                        <OwlCarousel responsive={{ ...carouselProdResponsive }} nav autoplay={true} autoplayTimeout={2500} loop>
                             {cards}
                         </OwlCarousel>
                         <div className='content-screen'>
