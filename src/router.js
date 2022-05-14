@@ -17,6 +17,7 @@ import LogIn from "./components/logIn/LogIn";
 import EditarAdmin from "./components/editarAdmin/EditarAdmin";
 import AuthProvider from "./context/AuthProvider";
 import { updateCurrentUser } from "firebase/auth";
+import DetalleItem from "./components/detalleItem/DetalleItem";
 
 
 
@@ -33,6 +34,7 @@ function Router() {
               <Route exact path="/" element={<Home />} />
               <Route path="/conocenos" element={<Conocenos />} />
               <Route path="/productos" element={<Productos />} />
+              <Route path="/detalle-producto" element={<DetalleItem />} />
               <Route path="/como_comprar" element={<ComoComprar />} />
               <Route path="/contacto" element={<Contacto />} />
               <Route path="/precios" element={<ListaPrecios />} />
