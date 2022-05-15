@@ -5,6 +5,7 @@ import { auth } from '../firebase/firebase';
 import { onAuthStateChanged } from 'firebase/auth';
 import logoImg from '../../img/iconos/tablitaLogo.png'
 import Logo from '../logo/Logo';
+import { CartWidget } from '../cartWidget/cartWidget';
 // import { CartWidget } from '../../cartWidget/cartWidget';
 import './navBar.css';
 
@@ -77,6 +78,9 @@ function NavBar() {
                             </NavLink>
                             <NavLink onClick={reset} className='link' to='/contacto'>
                                 <p className='d5' >CONTACTO</p>
+                            </NavLink>
+                            <NavLink onClick={reset} className='link' to='/cart'>
+                                <CartWidget/>
                             </NavLink>
                             <NavLink onClick={reset} className='link' style={{ display: editTag }} to='/editar'>
                                 <p className='d5' >Editar</p>

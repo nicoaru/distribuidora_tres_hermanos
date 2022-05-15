@@ -18,6 +18,8 @@ import EditarAdmin from "./components/editarAdmin/EditarAdmin";
 import AuthProvider from "./context/AuthProvider";
 import { updateCurrentUser } from "firebase/auth";
 import DetalleItem from "./components/detalleItem/DetalleItem";
+import { Cart } from "./pages/cart/cart";
+import { CartProvider } from "./context/cartContext";
 
 
 
@@ -27,7 +29,8 @@ function Router() {
 
     <BrowserRouter>
       <ProductProvider>
-        <AuthProvider>
+        <CartProvider>
+          <AuthProvider>
           <Routes>
 
             <Route path="/" element={<Layout />} >
@@ -43,9 +46,11 @@ function Router() {
               <Route path="/login" element={<LogIn />} />
               <Route path="/*" element={<PageNotFound />} />
               <Route path="/editar" element={<EditarAdmin />} />
+              <Route path="/cart" element={<Cart />} />
             </Route>
           </Routes>
-        </AuthProvider>
+          </AuthProvider>
+        </CartProvider>
       </ProductProvider>
 
     </BrowserRouter>

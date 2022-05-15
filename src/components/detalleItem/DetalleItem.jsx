@@ -1,19 +1,41 @@
-import React from 'react'
-import { useLocation } from 'react-router-dom'
+import React, {useEffect, useState, useContext} from 'react'
+import { useLocation, Link } from 'react-router-dom'
 import { PortadaProductos } from '../portadaProductos/portadaProductos'
 import watsappIcon from '../../img/iconos/iconoWatsapp.png'
 import DescargarPrecios from '../descargaPDF/DescargarPrecios'
 import { CarouselProductos } from '../carouselProductos/carouselProductos'
 import { ProductConsumer } from '../../context/ProductProvider'
 import './detalleItemStyle.css'
+import { ItemCount } from '../itemCount/itemCount' 
+import { CartContext } from '../../context/cartContext'
+import { BotonLink } from '../botonLink/botonLink'
+
 
 
 
 const DetalleItem = () => {
+
+    //Datos producto a mostrar
     const location = useLocation()
     const { from, producto, img2 } = location.state
 
-    const { productosQueryDB } = ProductConsumer();
+    //Productos para el carousel 
+    const { productosQueryDB, imagenes, getProductsText, getImagenes, imagenes2 } = ProductConsumer();
+    useEffect(() => {
+        productosQueryDB.length < 1 && getProductsText();
+        imagenes.length < 1 && getImagenes();
+    }, [])
+
+
+    //ItemCount
+    const [addedToCart, setAddedToCart] = useState(false)
+
+    const {cart, addItem} = useContext(CartContext)
+    const onAdd = (quantity) => {
+        addItem(producto, quantity, img2)
+        setAddedToCart(true)
+    }
+    console.log(producto)
 
     return (
         <div>
@@ -32,15 +54,22 @@ const DetalleItem = () => {
                         <div className='detalles-SKU'>
                             <p className='itemDetail-textDescripcion'>Descripcion del producto si la huebiera. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam fugit repudiandae sapiente ad, nulla in id veniam assumenda. Nobis, placeat. Corporis dolor facere voluptatibus quam tempora alias eum numquam minus!</p>
                         </div>
-                        <div className='itemDetail-boton align-self-stretch align-self-sm-start mt-5'>
+
+
+                        <ItemCount initial={0.5} unidadVenta={producto.__EMPTY_6} onAdd={onAdd}></ItemCount>
+                        {   addedToCart && <BotonLink to={'/cart'} texto={'Terminar mi compra'}/>   }
+
+
+                        {/* <div className='itemDetail-boton align-self-stretch align-self-sm-start mt-5'>
                             <img className='me-3' src={watsappIcon} alt="watsapp icon" />
                             <span>Hace tu pedido</span>
-                        </div>               
+                        </div>       */}
+
                     </div>
                 </div>
             </div>
             <DescargarPrecios/>
-            <CarouselProductos carouselTitle={'Productos Relacionados'} productosParaMostrar={productosQueryDB}/>
+            <CarouselProductos carouselTitle={'Productos Relacionados'} productosQuery={productosQueryDB} imagenes2={imagenes2}/>
         </div>
     )
 }
