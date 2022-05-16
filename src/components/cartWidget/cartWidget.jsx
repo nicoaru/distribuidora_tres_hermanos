@@ -21,10 +21,9 @@ function CartWidget() {
     return (
         <div className='cartWidgetContainer'>
             <Link className='link' to='/cart'>
-                <img src={CartIcon} height='35px' alt='cart-widget'/>
                 <div className='widgetQuantity'>{totalQuantity()}</div>
-            </Link>            
-        </div> 
+            </Link>
+        </div>
     )
 }
 

@@ -95,7 +95,7 @@ ul {
     text-decoration: none;
     color: inherit;
     display: flex;
-    margin-top: 4vw;
+    margin-top: 3vw;
 }
 .link p{
     margin: 0;
@@ -104,6 +104,11 @@ ul {
     height: 100%;
     display: flex;
     align-items: center;
+
+}
+.cart-special{
+    height: 1.8rem;
+    
 }
 
 .link:hover{
@@ -133,11 +138,13 @@ ul {
     background-color: var(--main-text-active-color);
 }   
 
+
 @media (min-width: 992px) {
 
     .link{
         white-space: nowrap;
-        margin-left: 3.5vw;
+        margin-left: 2.8vw;
+     
     }
     .link{
         margin-top: 0rem;
@@ -156,4 +163,9 @@ ul {
         
    
     }
+    .cart-special{
+        background-color: red;
+        width: 0rem;
+    }
+    
 }

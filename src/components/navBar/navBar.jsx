@@ -51,7 +51,7 @@ function NavBar() {
                     <Logo location='navbar-brand' />
                 </div>
                 <div className='logoImg'>
-                    <img src={logoImg} alt="logo image"/>
+                    <img src={logoImg} alt="logo image" />
                 </div>
 
                 <nav className="navbar navbar-expand-lg navbar-light">
@@ -79,8 +79,8 @@ function NavBar() {
                             <NavLink onClick={reset} className='link' to='/contacto'>
                                 <p className='d5' >CONTACTO</p>
                             </NavLink>
-                            <NavLink onClick={reset} className='link' to='/cart'>
-                                <CartWidget/>
+                            <NavLink onClick={reset} className='link cart-special' to='/cart'>
+                                <CartWidget />
                             </NavLink>
                             <NavLink onClick={reset} className='link' style={{ display: editTag }} to='/editar'>
                                 <p className='d5' >Editar</p>
