@@ -1,6 +1,6 @@
 import React from 'react'
 import './acordionFiltroStyle.css'
-const AcordionFiltro = ({ aux, titulo, ...opciones }) => {
+const AcordionFiltro = ({ aux, titulo, fn, ...opciones }) => {
 
     return (
         <div>
@@ -26,7 +26,7 @@ const AcordionFiltro = ({ aux, titulo, ...opciones }) => {
                         data-bs-parent="#accordionFlushExample">
                         <div className="accordion-body">
                             {opciones.opciones.map((element, id) => {
-                                return <p key={id}>{element}</p>
+                                return <p onClick={(e) => fn(e)} key={id}>{element}</p>
                             })}
                         </div>
                     </div>
