@@ -123,18 +123,18 @@ ul {
     border-bottom-style: solid;
 }
 
-.log-out-button{
+.btn.log-out-button{
+    position: absolute;
     z-index: 100;
-    position: fixed;
     left: 50%;
-    top: 3vh;
-    border-radius: 1vw;
+    transform: translate(0,-50%);
+    /* top: 3vh; */
     background-color: transparent;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    white-space: nowrap;
     border: none;
-    width: 100px;
-    border-bottom: 1px solid rgb(180, 180, 180);
 }
-.log-out-button:hover{
+.btn.log-out-button:hover{
     background-color: var(--main-text-active-color);
 }   
 

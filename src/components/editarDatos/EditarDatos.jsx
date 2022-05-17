@@ -20,9 +20,9 @@ const EditarDatos = () => {
                 <div className='main-div-edicion'>
                     <Editor titulo='Productos' coleccion='productos' id={productosQueryDB[productosQueryDB.length - 1]?.id} />
 
-                    <Editor titulo='Textos' coleccion='textos' id={edicionTexto[edicionTexto.length - 1]?.id} />
+                    {/* <Editor titulo='Textos' coleccion='textos' id={edicionTexto[edicionTexto.length - 1]?.id} />
 
-                    <Editor titulo='Datos' coleccion='datos' id={edicionDeDatos[edicionDeDatos.length - 1]?.id} />
+                    <Editor titulo='Datos' coleccion='datos' id={edicionDeDatos[edicionDeDatos.length - 1]?.id} /> */}
                 </div>
             }
         </>

@@ -18,7 +18,7 @@ const AuthProvider = ({ children }) => {
         e.preventDefault()
         try {
             await signOut(auth)
-            navigate('/')
+            navigate('/login')
 
         } catch (error) {
             console.log(error)

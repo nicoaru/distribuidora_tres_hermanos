@@ -21,11 +21,11 @@ function NavBar() {
         onAuthStateChanged(auth, (user) => {
             if (user?.uid) {
                 setEditTag('flex')
-                setLogOutBtn('flex')
+                setLogOutBtn('Log Out')
 
             } else {
                 setEditTag('none')
-                setLogOutBtn('none')
+                setLogOutBtn('Log In')
             }
         })
     }, [currentUser]);
@@ -41,10 +41,10 @@ function NavBar() {
             click.current.click()
         }
     }
-
+    //<button className='btn log-out-button m-0' onClick={logOut} style={{ display: logOutBtn }}>Log Out</button>
     return (
         <>
-            <button className='log-out-button' onClick={logOut} style={{ display: logOutBtn }}>Log Out</button>
+
 
             <div className='navBar'>
                 <div>
@@ -85,8 +85,8 @@ function NavBar() {
                             <NavLink onClick={reset} className='link' style={{ display: editTag }} to='/editar'>
                                 <p className='d5' >Editar</p>
                             </NavLink>
-                            <NavLink onClick={reset} className='link' to='/login'>
-                                <p className='d5' >Log In</p>
+                            <NavLink onClick={logOut} className='link' to='/login'>
+                                <p className='d5' >{logOutBtn}</p>
                             </NavLink>
                         </div>
                     </div>

@@ -6,6 +6,7 @@ import { onAuthStateChanged } from 'firebase/auth'
 import { auth } from '../firebase/firebase';
 
 import { AuthConsumer } from '../../context/AuthProvider'
+import './editarDatosStyle.css'
 
 
 const EditarAdmin = () => {
