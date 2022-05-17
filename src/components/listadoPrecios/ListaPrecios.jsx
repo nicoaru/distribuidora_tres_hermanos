@@ -3,6 +3,9 @@ import { createPDF } from './helperPrecios'
 import './listaPreciosPDF.css'
 import { ProductConsumer } from '../../context/ProductProvider'
 import imgLoader from '../../img/iconos/Ilustraciones_iconos-05.png'
+import jsPDF from "jspdf";
+import "jspdf-autotable";
+import { getDataUri, toDataURL } from './getImgDownloads'
 
 
 
@@ -17,7 +20,7 @@ const ListaPrecios = () => {
     }, [])
 
     const handlePDF = () => {
-        createPDF(productosQueryDB[productosQueryDB.length - 1]?.data, imagenes2)
+        createPDF(productosQueryDB[productosQueryDB.length - 1]?.data)
     }
 
     return (
@@ -34,6 +37,7 @@ const ListaPrecios = () => {
                         <th>Imagen</th>
                         <th>Nombre</th>
                         <th>Precio</th>
+                        <th>Categoria</th>
                         <th className='tabla-descripcion'>Descripcion</th>
                     </tr>
                 </thead>
@@ -47,6 +51,7 @@ const ListaPrecios = () => {
                                     <td><img className="img-thumbnail" src={imagenes2[element.__EMPTY_3]} alt="imagen Producto" /></td>
                                     <td>{element.__EMPTY_4}</td>
                                     <td>$ {element.__EMPTY_7} / {element.__EMPTY_6}</td>
+                                    <td>{element.__EMPTY_5}</td>
                                     <td className='tabla-descripcion'>{element.descripcion}</td>
                                 </tr>
                             )
