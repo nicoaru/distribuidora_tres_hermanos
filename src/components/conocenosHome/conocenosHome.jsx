@@ -16,8 +16,8 @@ function ConocenosHome() {
                 </div>
                 <div className='conocenosHomeTexto d-flex flex-column justify-content-center px-3 ps-md-4 mt-4 mt-md-0'>
                     <h1 className='mt-0 mb-3'><span>Conoce</span>nos</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum sed arcu varius nisl id etiam egestas. Facilisi vulputate pharetra condimentum mattis pellentesque.</p>
-                    <BotonLink texto={'NOSOTROS'} to={'/conocenos'} width={'150px'}/>
+                    <p>¡Hola! Somos una empresa familiar pequeña, que opera desde Agosto en la ciudad de Bell Ville, Córdoba, Argentina.</p>
+                    <p>Nuestro objetivo es llevar directamente a tu casa o a tu negocio, los mejores quesos y lácteos de diferentes marcas seleccionadas, y junto a esto, nos preocupamos de entregarte un servicio rápido, directo y cercano.</p>                    <BotonLink texto={'NOSOTROS'} to={'/conocenos'} width={'150px'}/>
                 </div>                  
             </div>
         </div>

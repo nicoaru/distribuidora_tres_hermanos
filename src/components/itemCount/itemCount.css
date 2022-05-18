@@ -6,8 +6,9 @@
 .itemCountContainer {
     width: 100%;
     padding: 5px;
-    background-color: rgb(238, 235, 235);
+    /* background-color: rgb(238, 235, 235); */
     border-radius: 5px;
+    position: relative;
 }
 .itemCountContainer .p {
     color: grey;
@@ -16,8 +17,9 @@
     width: 100%;
     padding: 5px;
     border-radius: 3px;
-    border: 1.5px solid rgb(72, 72, 204);
-    color: rgb(72, 72, 204);
+    background-color: transparent;
+    border: 1.5px solid rgb(213, 163, 34);
+    color: black;
     text-align: center;
 }
 
@@ -25,14 +27,14 @@
     margin-bottom: 5px;
     padding: 5px;
     border-radius: 3px;
-    border: 1px solid grey;
+    border: 1px solid rgb(213, 163, 34);
     display: flex;
     flex-flow: row nowrap;
     /*justify-content: center;*/
 }
 
 .itemCount .restarItem, .itemCount .sumarItem {
-    color: rgb(72, 72, 204);
+    color: black;
     padding: 0px 5px 0px 5px;
 }
 .btn:hover, .itemCount .restarItem:hover, .itemCount .sumarItem:hover {
@@ -44,4 +46,11 @@
     text-align: center;
 }
 
+.toast {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    transform: translateX(100px);
+    transform: translateY(-100%);
 
+}

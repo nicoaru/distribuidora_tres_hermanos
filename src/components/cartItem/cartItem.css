@@ -2,8 +2,13 @@
     /* margin: 1em 0px; */
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+}
+@media (min-width: 576px) {
+    .cartItemContainer {
+        justify-content: space-between;
+    }
 }
 .cartItemImage {
     height: 50px;
@@ -13,3 +18,29 @@
 .cartItemContainer .itemTitle, .cartItemContainer .itemPrice {
     font-size: 20px;
 }
+.itemTitle {
+    color: #283333;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 18px;
+    /* text-align: center; */
+    /* margin-bottom: 1rem; */
+}
+.itemMarca {
+    color: #283333;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    /* text-align: center; */
+    margin-bottom: 0.1rem;
+}
+.cartItemDeleteImage {
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+}
+    @media (min-width: 576px) {
+        .cartItemDeleteImage {
+            height: 30px;
+            width: 30px;
+        }
+    }

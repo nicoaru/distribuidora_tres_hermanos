@@ -14,12 +14,17 @@
 
 .cartItemCount {
     margin-bottom: 5px;
-    padding: 5px;
+    padding: 0px;
     border-radius: 3px;
     border: 1px solid grey;
     display: flex;
     flex-flow: row nowrap;
     /*justify-content: center;*/
+}
+@media (min-width: 576px) {
+    .cartItemCount {
+        padding: 5px;
+    }
 }
 
 .cartItemCount .restarItem, .cartItemCount .sumarItem {

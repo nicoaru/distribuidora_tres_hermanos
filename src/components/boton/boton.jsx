@@ -3,10 +3,10 @@ import './boton.css'
 
 
 
-function Boton({texto, width, onClickFunction}) {
+function Boton({texto, width, onClickFunction, classnames}) {
 
     return(
-        <div className='botonComponent' onClick={onClickFunction} style={{width: `${width}`}}>
+        <div className={`botonComponent ${classnames}`} onClick={onClickFunction} style={{width: `${width}`}}>
             {texto}
         </div>
     )

@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
+import { Toast, ToastBody } from 'react-bootstrap'
 import './itemCount.css'
 
-function ItemCount({ initial, onAdd, unidadVenta }) {
+function ItemCount({ initial, onAdd, unidadVenta, showToast, setShow }) {
     // console.log(`stock => ${stock}`)
     
     const [itemAmount, setItemAmount] = useState(initial)
@@ -21,6 +22,9 @@ function ItemCount({ initial, onAdd, unidadVenta }) {
                 <div className='sumarItem' onClick={sumarItem}>+</div>
             </div>
             <button className='itemCount-btn' onClick={() => onAdd(itemAmount)}>Agregar al carrito</button>
+            <Toast show={showToast}  onClose={() => setShow(false)} delay={3000} autohide>
+                <Toast.Body>El producto se ha agregado al carrito!</Toast.Body>
+            </Toast>
         </div>
     )
 

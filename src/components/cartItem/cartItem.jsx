@@ -17,11 +17,13 @@ function CartItem({item, imgUrl, quantity}) {
         
         <div className='cartItemContainer'>
             <img className='cartItemImage' src={imgUrl} />
-            <h2 className='itemTitle'>{item.__EMPTY_5}</h2>
-            <h2 className='itemMarca'>{item.__EMPTY_4}</h2>
-            <CartItemCount initial={quantity} onAmountChange={onAmountChange} />
+            <div d-flex flex-column>
+                <h2 className='itemMarca'>{item.__EMPTY_4}</h2>
+                <h2 className='itemTitle'>{item.__EMPTY_5}</h2>
+            </div>
+            <CartItemCount initial={quantity} unidadVenta={item.__EMPTY_6} onAmountChange={onAmountChange} />
             <h2 className='itemPrice'>${item.__EMPTY_7*quantity}</h2>
-            <img src={deleteImg} height='30px' width='30px' onClick={() => removeItem(item.id)} alt='delete button'/>
+            <img className='cartItemDeleteImage' src={deleteImg} onClick={() => removeItem(item.__EMPTY_3)} alt='delete button'/>
         </div>
         
     )

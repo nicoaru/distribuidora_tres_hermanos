@@ -55,8 +55,7 @@ function CartProvider ({ children}) {
     }
     const totalQuantity = () => {
         if(!carritoVacio) {
-            let quants = cart.map(obj => obj.quantity)
-            return quants.reduce((acumulado, actual) => acumulado + actual)
+            return cart.length
         }
     }
 

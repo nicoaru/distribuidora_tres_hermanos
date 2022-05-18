@@ -28,14 +28,14 @@ const DetalleItem = () => {
 
 
     //ItemCount
-    const [addedToCart, setAddedToCart] = useState(false)
 
     const {cart, addItem} = useContext(CartContext)
     const onAdd = (quantity) => {
         addItem(producto, quantity, img2)
-        setAddedToCart(true)
+        setShowToast(true)
     }
-    console.log(producto)
+    const [showToast, setShowToast] = useState(false);
+
 
     return (
         <div>
@@ -55,9 +55,10 @@ const DetalleItem = () => {
                             <p className='itemDetail-textDescripcion'>Descripcion del producto si la huebiera. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam fugit repudiandae sapiente ad, nulla in id veniam assumenda. Nobis, placeat. Corporis dolor facere voluptatibus quam tempora alias eum numquam minus!</p>
                         </div>
 
+                        <ItemCount onAdd={onAdd} showToast={showToast} setShow={setShowToast} initial={0.5} unidadVenta={producto.__EMPTY_6}></ItemCount>
+                        
 
-                        <ItemCount initial={0.5} unidadVenta={producto.__EMPTY_6} onAdd={onAdd}></ItemCount>
-                        {   addedToCart && <BotonLink to={'/cart'} texto={'Terminar mi compra'}/>   }
+                        {/* {   addedToCart && <BotonLink to={'/cart'} texto={'Terminar mi compra'}/>   } */}
 
 
                         {/* <div className='itemDetail-boton align-self-stretch align-self-sm-start mt-5'>

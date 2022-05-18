@@ -8,12 +8,11 @@ import marca2 from "../../img/marcas/marca2.png"
 import marca3 from "../../img/marcas/marca3.png"
 import marca4 from "../../img/marcas/marca4.png"
 import marca5 from "../../img/marcas/marca5.png"
-import marca6 from "../../img/marcas/marca6.png"
 
 
 function CarouselMarcas() {
 
-    let imagenes = [marca1, marca2, marca3, marca4, marca5, marca6]
+    let imagenes = [marca1, marca2, marca3, marca4, marca5]
 
     let cards = imagenes.map((img, index) => {
         return <div className='item' key={index}> <img src={img}/> </div>})

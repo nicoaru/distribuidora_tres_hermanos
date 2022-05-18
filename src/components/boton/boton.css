@@ -1,7 +1,7 @@
 .botonComponent {
     background-color: rgba(213, 163, 34, 1);
-    border-radius: 0%;
-    height: 48px;
+    border-radius: 5px;
+    /* height: 48px; */
     width: fit-content;
     border: none;
     padding: 15px;
@@ -9,6 +9,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    text-align: center;
 }
 
 .botonComponent:hover {

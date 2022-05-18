@@ -13,9 +13,9 @@ const ContactoSide = () => {
             <h3 className='mt-3 my-4'>C<span>ontactano</span>s</h3>
             <div className='auxDivContactos'>
                 <IconoContacto datoPrincipal="TELEFONO" datoSecundario="+549*******" icono={tel} />
-                <IconoContacto datoPrincipal="MAIL" datoSecundario="dist@gmail.com" icono={mail} />
-                <IconoContacto datoPrincipal="HORARIO" datoSecundario="Atendemos entre 8 - 18" icono={reloj} />
-                <IconoContacto datoPrincipal="DIRECCION" datoSecundario="Direccion" icono={dir} />
+                <IconoContacto datoPrincipal="MAIL" datoSecundario="Los.3.hermanosBV@gmail.com" icono={mail} />
+                <IconoContacto datoPrincipal="HORARIO" datoSecundario="Atendemos de 8 a 18 hs" icono={reloj} />
+                <IconoContacto datoPrincipal="UBICACION" datoSecundario="Bell Ville, Córdoba, Argentina" icono={dir} />
             </div>
         </div>
     )

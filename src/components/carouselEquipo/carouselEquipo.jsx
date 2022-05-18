@@ -4,10 +4,7 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import { CardEquipo } from "../cardEquipo/cardEquipo";
-import imgJuanPablo from '../../../src/img/tienda/imgJuanPablo.jpg'
 import imgMariaLaura from '../../../src/img/tienda/imgMariaLaura.png'
-import imgFulana from '../../../src/img/tienda/imgFulana.png'
-import imgFulano from '../../../src/img/tienda/imgFulano.png'
 
 
 
@@ -15,24 +12,9 @@ function CarouselEquipo() {
 
     let equipo = [
         {
-            nombre: 'Juan Pablo Pastorino',
-            cargo: 'Sub Gerente',
-            imgUrl: imgJuanPablo
-        },
-        {
             nombre: 'Maria Laura Pastorino',
             cargo: 'CEO',
             imgUrl: imgMariaLaura
-        },
-        {
-            nombre: 'Fulana',
-            cargo: 'Encargada de Ventas',
-            imgUrl: imgFulana
-        },
-        {
-            nombre: 'Fulano',
-            cargo: 'Encargdo de Logistica',
-            imgUrl: imgFulano
         }
     ]
 

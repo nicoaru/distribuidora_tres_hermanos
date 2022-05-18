@@ -16,9 +16,10 @@ function ConocenosContainer() {
                 </div>
                 <div className='conocenosPrincipalTexto col-12 col-md-6 px-3 ps-md-4 mt-4 mt-md-0'>
                     <h2 className='mb-0'>Distribuidora Los 3 Hermanos</h2>
-                    <h1 className='mt-0 mb-3'><span>Conoce</span>nos</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum sed arcu varius nisl id etiam egestas. Facilisi vulputate pharetra condimentum mattis pellentesque.</p>
-                    <p>Odio volutpat auctor ut fermentum quam massa sagittis. Vel consectetur turpis ac ac. Venenatis ac cras pulvinar habitant aliquam volutpat amet. Ornare sit ipsum volutpat ultrices consequat elementum aliquam. Feugiat orci sem ut vulputate tellus.</p>
+                    <h1 className='mt-0 mb-3 mb-md-5'><span>Conoce</span>nos</h1>
+                    <p>¡Hola! Somos una empresa familiar pequeña, que opera desde Agosto en la ciudad de Bell Ville, Córdoba, Argentina.</p>
+                    <p>Nuestro objetivo es llevar directamente a tu casa o a tu negocio, los mejores quesos y lácteos de diferentes marcas seleccionadas, y junto a esto, nos preocupamos de entregarte un servicio rápido, directo y cercano.</p>
+                    <p>Si buscas comprar quesos para venta minorista y mayorista ¡este es el lugar que necesitas! Y no te preocupes de tu ubicación, ya que llegamos a todos los rincones del país.</p>
                 </div>      
             </div>
 

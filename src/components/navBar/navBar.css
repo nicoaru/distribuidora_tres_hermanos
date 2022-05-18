@@ -164,8 +164,9 @@ ul {
    
     }
     .cart-special{
-        background-color: red;
+        /* background-color: red; */
         width: 0rem;
+        margin-right: 1.5rem;
     }
     
 }

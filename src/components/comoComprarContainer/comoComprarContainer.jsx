@@ -18,7 +18,7 @@ function ComoComprarContainer() {
                     <h1>Cómo comprar</h1>
                     <p>En Distribuidora Los 3 Hermanos, vendemos nuestros productos por encargo...</p>
                 </div>
-                <div className="itemsContainer1 container-fluid mt-4">
+                <div className="itemsContainer1 container-fluid my-4">
                     <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-4">
                         <div className="col d-flex justify-content-center mb-3">
                             <ItemComoComprar1 itemIconNumber={1} itemIconImg={iconCamionAmarillo} itemTitle={'Paso1:'} itemSubTitle={'Busca el producto'} itemText={'Despachamos a lo largo de todo Argentina'}/>
@@ -27,10 +27,10 @@ function ComoComprarContainer() {
                             <ItemComoComprar1 itemIconNumber={2} itemIconImg={iconTelAmarillo} itemTitle={'Paso2:'} itemSubTitle={'Revisa la lista de precios'} itemText={'En los productos se encuentra el precio minorista. Si quieres comprar al por mayor, descarga y revisa la lista de precios'}/>
                         </div>
                         <div className="col d-flex justify-content-center mb-3">
-                            <ItemComoComprar1 itemIconNumber={3} itemIconImg={iconRelojAmarillo} itemTitle={'Paso3:'} itemSubTitle={'Haz tu pedido por whatsapp'} itemText={'Escríbenos por whatsapp al +56xxxxxx detallando el nombre del producto y la cantidad.'}/>
+                            <ItemComoComprar1 itemIconNumber={3} itemIconImg={iconRelojAmarillo} itemTitle={'Paso3:'} itemSubTitle={'Agrega los productos al carrito'} itemText={'Elegí la cantidad que deseas comprar y toca el botón "Agregar al carrito" en cada producto'}/>
                         </div>
                         <div className="col d-flex justify-content-center mb-3">
-                            <ItemComoComprar1 itemIconNumber={4} itemIconImg={iconRelojAmarillo} itemTitle={'Paso4:'} itemSubTitle={'Transferencia'} itemText={'Escríbenos por whatsapp al +56xxxxxx detallando el nombre del producto y la cantidad.'}/>
+                            <ItemComoComprar1 itemIconNumber={4} itemIconImg={iconRelojAmarillo} itemTitle={'Paso4:'} itemSubTitle={'Envianos tu pedido por WhatsApp'} itemText={'Entrá al carrito que se encuentra en el menú superior donde podrás ver el total del pedido y toca el boton "Enviar pedido"'}/>
                         </div>
                     </div>
                 </div>

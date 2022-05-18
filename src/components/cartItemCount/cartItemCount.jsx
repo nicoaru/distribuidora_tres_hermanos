@@ -3,7 +3,7 @@ import './cartItemCount.css'
 
 
 
-function CartItemCount({ initial, onAmountChange }) {
+function CartItemCount({ initial, onAmountChange, unidadVenta }) {
     const [itemAmount, setItemAmount] = useState(initial)
     const restarItem = () => {
         if (itemAmount > 0.5) {
@@ -21,7 +21,7 @@ function CartItemCount({ initial, onAmountChange }) {
     return (
         <div className='cartItemCount'>
             <div className='restarItem' onClick={restarItem}>-</div>
-            <div className='amount'>{itemAmount}</div>
+            <div className='amount'>{itemAmount} {unidadVenta}</div>
             <div className='sumarItem' onClick={sumarItem}>+</div>
         </div>
     )

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { CartItem } from '../../components/cartItem/cartItem'
 import { CartContext } from '../../context/cartContext'
 import { Boton } from '../../components/boton/boton';
+import { BotonLink } from '../../components/botonLink/botonLink'
 import './cart.css'
 
 function Cart () {
@@ -19,10 +20,13 @@ function Cart () {
     function enviarPedido() {
         let cartItemsOrganizados = cart.map(obj => {return {id: obj.item.__EMPTY_3, marca: obj.item.__EMPTY_4, categoria: obj.item.__EMPTY_5, unidadVenta: obj.item.__EMPTY_6, precio: obj.item.__EMPTY_7, imgUrl: obj.imgUrl, quantity: obj.quantity}})
         console.log('cartItemsOrganizados => ', cartItemsOrganizados);
-        let cartItemsString = cartItemsOrganizados.map(obj => {return `${encodeURIComponent(`${obj.quantity} ${obj.unidadVenta} de ${obj.categoria} ${obj.marca} => $${obj.quantity * obj.precio}`)}`})
+        
+        let cartItemsString = cartItemsOrganizados.map(obj => {return `${encodeURIComponent(`- ${obj.quantity} ${obj.unidadVenta} de ${obj.categoria} ${obj.marca} => $${obj.quantity * obj.precio}`)}`})
         console.log("cartItemsString => ", cartItemsString);
-        let stringUrl = `${encodeURIComponent('Buen dia Distribuidora Tres Hermanos.Te queria hacer el siguiente pedido:')}%0A${cartItemsString.join('%0A')}`
+        
+        let stringUrl = `${encodeURIComponent('Buen dia Distribuidora Tres Hermanos. Te queria hacer el siguiente pedido:')}%0A%0A${cartItemsString.join('%0A')}%0A%0A${encodeURIComponent('*Total:* $')}${totalCharge()}%0A%0A${encodeURIComponent('Muchas gracias!')}`
         console.log('stringParaUrl => ', stringUrl);
+        
         let whatsappLink = `https://wa.me/5491148889851?text=${stringUrl}`
         console.log('whatsappLink => ', whatsappLink);
         window.open(whatsappLink);
@@ -37,7 +41,7 @@ function Cart () {
                 <Fragment>
                     <h2 className="textWhenEmpty">No has agregado nada al carrito todavia</h2>
                     <div className='cartButtonsContainer'>
-                        <Link className='link btn' to='/productos'>Quiero tentarme con algo!</Link>    
+                        <BotonLink texto={'Quiero tentarme con algo!'} to='/productos'></BotonLink>    
                     </div>       
                 </Fragment>
                 :
@@ -46,7 +50,7 @@ function Cart () {
                     <h2 className='totalCharge'>Total ${totalCharge()}</h2>
                     <div className='cartButtonsContainer'>
                         <button className='btn' onClick={clear}>Vaciar carrito</button>
-                        <Boton onClickFunction={enviarPedido} texto={'Enviar pedido por WhatsApp'}/>
+                        <Boton classnames={'botoncito'} onClickFunction={enviarPedido} texto={'Enviar pedido por WhatsApp'}/>
                     </div>
               
                 </Fragment>
