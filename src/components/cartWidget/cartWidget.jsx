@@ -20,9 +20,9 @@ function CartWidget() {
 
     return (
         <div className='cartWidgetContainer'>
-            <Link className='link' to='/cart'>
+            <div className='link'>
                 <div className='widgetQuantity'>{totalQuantity()}</div>
-            </Link>
+            </div>
         </div>
     )
 }

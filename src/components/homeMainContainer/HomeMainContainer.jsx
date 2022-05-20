@@ -10,7 +10,8 @@ import DescargarPrecios from '../descargaPDF/DescargarPrecios';
 import IconosContainer from '../iconoContainer/IconosContainer';
 import { ProductConsumer } from '../../context/ProductProvider'
 import { ConocenosHome } from '../conocenosHome/conocenosHome';
-///
+
+
 const HomeMainContainer = () => {
 
     
@@ -28,9 +29,7 @@ const HomeMainContainer = () => {
             <CarouselProductos carouselTitle={'Favoritos'} productosQuery={productosQueryDB} imagenes2={imagenes2}/>
             <DescargarPrecios />
             <ConocenosHome/>
-            <CarouselMarcas />
- 
-
+            <CarouselMarcas/>
         </div>
     )
 }

@@ -12,10 +12,27 @@
 .main-carusel-div img{
     /* height: 80vh; */
    object-fit: cover;
-   width: 100%;
 }
 
-
+.owl-nav {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+}
+.owl-nav .owl-prev, .owl-nav .owl-next {
+    position: absolute;
+    color: inherit;
+    background: none;
+    border: none;
+    
+}
+.owl-prev {
+    left: 0;
+}
+.owl-next {
+    right: 0;
+}
 .img-carrusel{
     position: relative;
 }

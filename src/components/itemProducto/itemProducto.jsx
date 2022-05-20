@@ -17,7 +17,7 @@ function ItemProducto({ producto, img2 }) {
                     <h5 className="card-title">{producto.__EMPTY_5}</h5>
                     <h6 className="card-price">{`$${producto.__EMPTY_7} / ${producto.__EMPTY_6}`}</h6>
                     <Link className="tarjeta col-8 col-sm-4 mb-0" to={'/detalle-producto'} state={{ from: producto.__EMPTY_3, producto: producto, img2: img2 }}>
-                        <a href="" className="card-button">Ver detalles</a>
+                        <span className="card-button">Ver detalles</span>
                     </Link>
                 </div>
             </div>

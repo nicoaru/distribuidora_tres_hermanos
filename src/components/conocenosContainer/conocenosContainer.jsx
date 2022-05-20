@@ -5,9 +5,20 @@ import imgConocenosQuesito from '../../img/tienda/pexels-polina-tankilevitch-418
 import imgConocenosCamion from '../../img/tienda/pexels-braeson-holland-8994766.jpg'
 import { CarouselEquipo } from '../carouselEquipo/carouselEquipo'
 import { CarouselMarcas } from '../carouselMarcas/carouselMarcas'
+import { CardEquipo } from '../cardEquipo/cardEquipo'
+import imgMariaLaura from '../../../src/img/tienda/imgMariaLaura.png'
 
 
 function ConocenosContainer() {
+
+    let equipo = [
+        {
+            nombre: 'Maria Laura Pastorino',
+            cargo: 'CEO',
+            imgUrl: imgMariaLaura
+        }
+    ]
+
     return (
         <div className='conocenos container-fluid'>
             <div className='conocenosPrincipal row align-items-center p-0'>
@@ -27,8 +38,8 @@ function ConocenosContainer() {
                 <div className='col-12 col-sm-5 col-lg-6 p-md-0 pe-md-2'>
                     <div className='conocenosSecudarioEquipo mb-2 p-3'>
                         <h1>Nuestro Equipo</h1>
-                        <div className='carouselEquipo'> 
-                            <CarouselEquipo/>
+                        <div className='equipo mt-5'> 
+                            <CardEquipo integranteEquipo={equipo[0]} />
                         </div>
                     </div>
                 </div>

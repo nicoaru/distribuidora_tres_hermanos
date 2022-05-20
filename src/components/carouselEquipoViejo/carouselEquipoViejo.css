@@ -1,0 +1,19 @@
+.carouselEquipoContainer .owl-nav {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+}
+.carouselEquipoContainer .owl-nav .owl-prev, .carouselEquipoContainer .owl-nav .owl-next {
+    position: absolute;
+    color: inherit;
+    background: none;
+    border: none;
+    z-index: 100;
+}
+.carouselEquipoContainer .owl-prev {
+    left: 0;
+}
+.carouselEquipoContainer .owl-next {
+    right: 0;
+}
