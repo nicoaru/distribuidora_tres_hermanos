@@ -1,8 +1,6 @@
 import jsPDF from "jspdf";
 import "jspdf-autotable";
-import { createElement } from "react";
-import imgAux from '../../img/iconos/cart-icon.png'
-import { getDataUri, toDataURL } from './getImgDownloads'
+
 
 export const createPDF = (list) => {
 

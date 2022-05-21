@@ -3,9 +3,7 @@ import { createPDF } from './helperPrecios'
 import './listaPreciosPDF.css'
 import { ProductConsumer } from '../../context/ProductProvider'
 import imgLoader from '../../img/iconos/Ilustraciones_iconos-05.png'
-import jsPDF from "jspdf";
 import "jspdf-autotable";
-import { getDataUri, toDataURL } from './getImgDownloads'
 
 
 
@@ -17,6 +15,7 @@ const ListaPrecios = () => {
     useEffect(() => {
         productosQueryDB.length < 1 && getProductsText();
         imagenes.length < 1 && getImagenes();
+        // eslint-disable-next-line
     }, [])
 
     const handlePDF = () => {

@@ -1,17 +1,15 @@
 import React, { useEffect, useState } from 'react'
-import { Link, Navigate } from 'react-router-dom'
+import { Navigate } from 'react-router-dom'
 import EditarDatos from '../editarDatos/EditarDatos'
 import UploadImg from '../uploadImg/UploadImg'
 import { onAuthStateChanged } from 'firebase/auth'
 import { auth } from '../firebase/firebase';
-
-import { AuthConsumer } from '../../context/AuthProvider'
 import './editarDatosStyle.css'
 
 
 const EditarAdmin = () => {
 
-    const { currentUser, setCurrentUser } = AuthConsumer()
+
     const [userOk, setUserOk] = useState(false)
     //console.log(currentUser)
 

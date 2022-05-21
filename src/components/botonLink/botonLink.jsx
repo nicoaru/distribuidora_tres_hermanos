@@ -2,8 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import './botonLink.css'
 
-
-
 function BotonLink({texto, width, to, classnames}) {
 
     return(

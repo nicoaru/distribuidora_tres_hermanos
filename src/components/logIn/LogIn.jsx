@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { auth } from '../firebase/firebase';
-import { uid, signInWithEmailAndPassword, onAuthStateChanged, signOut } from 'firebase/auth';
+import {  signInWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
-import { AuthConsumer } from '../../context/AuthProvider';
 
 
 import './logInStyle.css'
@@ -13,7 +12,6 @@ const LogIn = () => {
     const [passWord, setPassWord] = useState('')
     const [response, setResponse] = useState('')
     const [tester, setTester] = useState('')
-    const [goEdit, setGoEdit] = useState(false)
 
 
     const handleUser = (e) => {
@@ -25,6 +23,7 @@ const LogIn = () => {
     const submitFormLogIn = async (e) => {
         e.preventDefault()
         try {
+            // eslint-disable-next-line
             const login = await signInWithEmailAndPassword(
                 auth,
                 user,

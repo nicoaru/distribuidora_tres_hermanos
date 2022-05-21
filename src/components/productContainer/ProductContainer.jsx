@@ -15,6 +15,7 @@ const ProductContainer = () => {
     useEffect(() => {
         productosQueryDB.length < 1 && getProductsText();
         imagenes.length < 1 && getImagenes();
+         // eslint-disable-next-line 
     }, [])
     const [categorias, setCategorias] = useState(['Todo'])
     const [displayProducts, setDisplayProducts] = useState([])
@@ -22,7 +23,7 @@ const ProductContainer = () => {
     useEffect(() => {
         const auxCat = new Set(['Todo'])
         const auxDisplay = []
-        productosQueryDB[productosQueryDB.length - 1]?.data.map(element => {
+        productosQueryDB[productosQueryDB.length - 1]?.data.forEach(element => {
             if (element.__EMPTY_5 !== 'categoria')
                 auxCat.add(element.__EMPTY_5)
             auxDisplay.push(element)
@@ -50,11 +51,10 @@ const ProductContainer = () => {
         'Precio mayor a menor',
         'Alfabetico']
 
-    const marcas = ['Marca 1', 'Marca 2']
 
     return (
         <>
-            {categorias.length === 0 || displayProducts.length === 0 && <h3>Cargando...</h3>}
+            {(categorias.length === 0 || displayProducts.length === 0) && <h3>Cargando...</h3>}
             <div className='outer-div'>
 
                 {categorias && <>

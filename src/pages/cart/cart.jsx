@@ -1,5 +1,4 @@
-import React, { Fragment, useContext, useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { Fragment, useContext } from 'react'
 import { CartItem } from '../../components/cartItem/cartItem'
 import { CartContext } from '../../context/cartContext'
 import { Boton } from '../../components/boton/boton';
@@ -10,7 +9,7 @@ function Cart () {
     const {cart, clear, totalCharge} = useContext(CartContext)
     console.log ('cart => ', cart)
     let carritoVacio
-    cart.length == 0 ? carritoVacio = true : carritoVacio =false
+    cart.length === 0 ? carritoVacio = true : carritoVacio =false
 
     let cartItemsToShow
     !carritoVacio && (cartItemsToShow = cart.map(obj => <><CartItem item={obj.item} imgUrl={obj.imgUrl} quantity={obj.quantity} key={obj.item.id}/> <hr/> </>))

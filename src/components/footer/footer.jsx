@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Logo from '../logo/Logo';
 import './footer.css';
 import iconoInstagram from '../../img/iconos/iconoInstagram.png'
@@ -13,11 +12,11 @@ function Footer() {
                         <Logo location='logo-brand' />
                     </div>
                     <div className='iconos-div d-flex justify-content-center align-items-center'>
-                        <a className='footer-iconos' target='_blank' href='https://www.facebook.com'>
-                            <img className='me-3 me-md-4' src={iconoFacebook}/>
+                        <a className='footer-iconos' target='_blank' rel="noreferrer" href='https://www.facebook.com'>
+                            <img className='me-3 me-md-4' src={iconoFacebook} alt="img3"/>
                         </a>
-                        <a className='footer-iconos' target='_blank' href='https://www.instagram.com'>
-                            <img src={iconoInstagram}/>
+                        <a className='footer-iconos' target='_blank' rel="noreferrer" href='https://www.instagram.com'>
+                            <img src={iconoInstagram} alt="img3"/>
                         </a>
                     </div>
                 </div>

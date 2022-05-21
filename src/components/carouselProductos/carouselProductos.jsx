@@ -8,18 +8,6 @@ import { BotonLink } from "../botonLink/botonLink";
 
 function CarouselProductos({ productosQuery, imagenes2, carouselTitle }) {
  
-    // let cardsJSX
-
-
-    // productosQuery[productosQuery.length - 1]?.data && imagenes2.length > 6 && 
-    // (cardsJSX = productosQuery[productosQuery.length - 1].data.map((element, id) => {
-    //     return <ItemProducto key={id} producto={element} img2={imagenes2[element.__EMPTY_3]} ></ItemProducto>
-    // }))
-    
-
-    // Propiedades responsive del carousel
-    // let carouselProdResponsive = { 0: { items: 1, slideBy: 1, margin: 0 }, 768: { items: 2, slideBy: 2, margin: 0 }, 992: { items: 3, slideBy: 3, margin: 50 }, 1200: { items: 3, slideBy: 3, margin: 80 } }
-   
     const carouselProdResponsive = {
         desktop: {
           breakpoint: { max: 3000, min: 992 },

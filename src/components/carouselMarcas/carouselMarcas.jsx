@@ -14,7 +14,7 @@ function CarouselMarcas() {
     let imagenes = [marca1, marca2, marca3, marca4, marca5]
 
     let cards = imagenes.map((img, index) => {
-        return <div className='itemCarouselMarcas' key={index}> <img src={img}/> </div>})
+        return <div className='itemCarouselMarcas' key={index}> <img src={img} alt="imgCarrusel"/> </div>})
 
     const carouselMarcasResponsive = {
         allDevices: {

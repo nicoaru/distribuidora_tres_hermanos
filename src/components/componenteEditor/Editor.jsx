@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react'
-import * as xlsx from 'https://unpkg.com/xlsx/xlsx.mjs';
+import React, { useState } from 'react'
+//declare module 'https://unpkg.com/xlsx/xlsx.mjs'
+import {read, utils} from 'xlsx';
 import { ProductConsumer } from '../../context/ProductProvider';
 import './editorStyle.css'
 import { db } from "../../components/firebase/firebase";
-import { storage } from "../../components/firebase/firebase";
-import { collection, doc, getDocs, getDoc, addDoc, deleteDoc, orderBy, query } from "firebase/firestore";
+import { collection, doc, addDoc, deleteDoc} from "firebase/firestore";
 
 
 
@@ -13,7 +13,7 @@ const Editor = ({ titulo, coleccion, id }) => {
 
     const [data, setData] = useState([])
 
-    const { getData, productosQueryDB, edicionTexto, edicionDeDatos, setproductosQueryDB, setEdicionTexto, setEdicionDeDatos } = ProductConsumer()
+    const { getData, setproductosQueryDB, setEdicionTexto, setEdicionDeDatos } = ProductConsumer()
 
     const [edicionLista, setEdicionLista] = useState('')
     const [eliminarEdicion, setEliminarEdicion] = useState('')
@@ -27,10 +27,10 @@ const Editor = ({ titulo, coleccion, id }) => {
             const reader = new FileReader();
             reader.onload = (e) => {
                 const data = e.target.result;
-                const workbook = xlsx.read(data, { type: "json" });
+                const workbook = read(data, { type: "json" });
                 const sheetName = workbook.SheetNames[0];
                 const worksheet = workbook.Sheets[sheetName];
-                const json = xlsx.utils.sheet_to_json(worksheet);
+                const json = utils.sheet_to_json(worksheet);
                 console.log(json);
                 setData(json)
             };
@@ -43,7 +43,7 @@ const Editor = ({ titulo, coleccion, id }) => {
         const col = collection(db, coleccion)
         try {
             const arrays = await addDoc(col, { data: data, date: new Date() })
-            arrays && setEdicionLista(`Actualizado correctamente lista de ${new Date}`)
+            arrays && setEdicionLista(`Actualizado correctamente lista de ${new Date()}`)
             setEliminarEdicion('')
         } catch (error) {
             console.log(error)
@@ -55,6 +55,7 @@ const Editor = ({ titulo, coleccion, id }) => {
         //revisar si esta bien eliminar. no podemos eliminar si queda un solo documento.
         let arrays = "";
         try {
+            // eslint-disable-next-line
             arrays = await deleteDoc(doc(db, coleccion, id))
             switch (coleccion) {
                 case 'productos':
@@ -65,6 +66,8 @@ const Editor = ({ titulo, coleccion, id }) => {
                     break;
                 case 'datos':
                     getData(coleccion).then(res => setEdicionDeDatos(res))
+                    break;
+                default:
                     break;
             }
             setEliminarEdicion(`Lista eliminada correctamente`)

@@ -29,3 +29,12 @@
 .card-text-precio.d5{
    color: var(--footer-text-active-color);
 }
+
+.main-card{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   border-bottom: 1px solid rgba(182, 181, 181, 0.952);
+
+}

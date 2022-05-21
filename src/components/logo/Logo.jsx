@@ -1,7 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import './logo.css'
-import tablitaLogo from '../../img/iconos/tablitaLogo.png'
 
 const Logo = ({ location }) => {
     return (

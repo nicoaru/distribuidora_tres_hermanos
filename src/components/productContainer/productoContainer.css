@@ -1,12 +1,9 @@
 .filtro-casillas{
     margin-left: 1rem;
-    /* padding: 0 1rem 1rem 1rem; */
-    /* display: flex;
-    flex-direction: column; */
+    flex-direction: column;
     width: 30vw;
     min-width: 250px;
     max-width: 300px;
-    /* align-content: flex-start; */
 }
 
 .productsContainer-titles {
@@ -16,7 +13,6 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 24px;
-    /* display: inline-block; */
     color: #2C4545;
     position: relative;
 }
@@ -36,7 +32,6 @@
     }
 
     .filtros{
-        /* width: 35vw; */
         max-width: 300px;
         float: initial;
         background-color: white;
@@ -53,4 +48,3 @@
 
 }
 
-/*  */

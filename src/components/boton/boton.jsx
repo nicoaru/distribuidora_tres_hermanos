@@ -1,8 +1,6 @@
 import React from "react";
 import './boton.css'
 
-
-
 function Boton({texto, width, onClickFunction, classnames}) {
 
     return(

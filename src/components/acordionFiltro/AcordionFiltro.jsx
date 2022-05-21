@@ -1,5 +1,6 @@
 import React from 'react'
 import './acordionFiltroStyle.css'
+
 const AcordionFiltro = ({ aux, titulo, fn, ...opciones }) => {
 
     return (

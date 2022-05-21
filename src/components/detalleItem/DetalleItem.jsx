@@ -1,14 +1,12 @@
 import React, {useEffect, useState, useContext} from 'react'
-import { useLocation, Link } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import { PortadaProductos } from '../portadaProductos/portadaProductos'
-import watsappIcon from '../../img/iconos/iconoWatsapp.png'
 import DescargarPrecios from '../descargaPDF/DescargarPrecios'
 import { CarouselProductos } from '../carouselProductos/carouselProductos'
 import { ProductConsumer } from '../../context/ProductProvider'
 import './detalleItemStyle.css'
 import { ItemCount } from '../itemCount/itemCount' 
 import { CartContext } from '../../context/cartContext'
-import { BotonLink } from '../botonLink/botonLink'
 
 
 
@@ -17,19 +15,20 @@ const DetalleItem = () => {
 
     //Datos producto a mostrar
     const location = useLocation()
-    const { from, producto, img2 } = location.state
+    const {  producto, img2 } = location.state
 
     //Productos para el carousel 
     const { productosQueryDB, imagenes, getProductsText, getImagenes, imagenes2 } = ProductConsumer();
     useEffect(() => {
         productosQueryDB.length < 1 && getProductsText();
         imagenes.length < 1 && getImagenes();
+        // eslint-disable-next-line
     }, [])
 
 
     //ItemCount
 
-    const {cart, addItem} = useContext(CartContext)
+    const { addItem} = useContext(CartContext)
     const onAdd = (quantity) => {
         addItem(producto, quantity, img2)
         setShowToast(true)

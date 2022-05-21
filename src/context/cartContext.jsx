@@ -11,7 +11,7 @@ function CartProvider ({ children}) {
     const [cart, setCart] = useState([])
     
     let carritoVacio
-    cart.length == 0 ? carritoVacio = true : carritoVacio = false
+    cart.length === 0 ? carritoVacio = true : carritoVacio = false
 
     // FUNCIONES COMPLEMENTARIAS  addItem
     const isInCart = (itemId) => {

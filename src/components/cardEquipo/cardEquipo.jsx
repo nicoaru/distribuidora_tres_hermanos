@@ -1,12 +1,7 @@
 import React from "react";
 import './cardEquipo.css';
 
-
-
-
 function CardEquipo({ integranteEquipo }) {
-
-
 
     return (
         <div className="cardEquipo d-flex justify-content-center">

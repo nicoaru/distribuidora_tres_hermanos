@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './iconoContacto.css'
 
 const IconoContacto = ({ datoPrincipal, datoSecundario, icono }) => {

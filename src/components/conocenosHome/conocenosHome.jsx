@@ -10,8 +10,8 @@ function ConocenosHome() {
         <div className='conocenosHome container-fluid d-flex justify-content-center'>
             <div className='col-md-11 col-lg-10 d-flex flex-column mt-5 flex-sm-row justify-content-center'>
                 <div className='conocenosHomeImagenes'>
-                    <img className='imgConocenosHome1' src={imgConocenos}/>
-                    <img className='imgConocenosHome2' src={imgCamion}/>
+                    <img className='imgConocenosHome1' alt='imgConocenos' src={imgConocenos}/>
+                    <img className='imgConocenosHome2' alt='imgConocenos' src={imgCamion}/>
 
                 </div>
                 <div className='conocenosHomeTexto d-flex flex-column justify-content-center px-3 ps-md-4 mt-4 mt-md-0'>

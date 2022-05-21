@@ -1,19 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import { storage } from '../firebase/firebase';
-import { getDownloadURL, ref, uploadBytes, listAll, deleteObject } from 'firebase/storage';
+import { ref, uploadBytes, deleteObject } from 'firebase/storage';
 import { ProductConsumer } from '../../context/ProductProvider'
-import { axios } from 'axios'
 import './test.css'
 
 
 const UploadImg = () => {
 
-    //console.log(storage)
-    let [opcionesTest, setOpcinoesTest] = useState()
+   
     let [file, setFile] = useState([]);
-    let [img, setImg] = useState([])
     let [idDelete, setIdDelete] = useState('')
-    const [urlImg, setUrlImg] = useState([])
+    const [urlImg] = useState([])
     const { imagenes, getImagenes } = ProductConsumer()
 
     //"https://firebasestorage.googleapis.com/v0/b/distribuidora-3-hermanos.appspot.com/o/productos%2F-3-%20Queso%20Port%20Salut%20-%20El%20Juan%20(1).png?alt=media&token=4b366afc-6320-4527-bbc1-1a324412dc68"
@@ -25,6 +22,7 @@ const UploadImg = () => {
         if (imagenes.length < 1) {
             getImagenes()
         }
+        // eslint-disable-next-line
     }, []);
 
 
@@ -40,9 +38,6 @@ const UploadImg = () => {
         } else {
             for (const path of file) {
                 const refPath = 'productos/';
-                const metadata = {
-                    contentType: path.type
-                }
                 // console.log(file)
                 const imgRef = ref(storage, refPath + path.name)
                 uploadBytes(imgRef, path)
@@ -60,9 +55,8 @@ const UploadImg = () => {
 
     const deleteImg = async () => {
         const deleteFile = async () => {
-            //console.log(idDelete)
+            // eslint-disable-next-line
             const aux = imagenes.filter(imagen => imagen.id == idDelete)
-            // console.log(aux)
             if (aux.length === 0) {
                 alert('Ese id de producto no tiene imagen asociada.')
             } else {
@@ -73,9 +67,6 @@ const UploadImg = () => {
         }
         await deleteFile()
     }
-    //"gs://distribuidora-3-hermanos.appspot.com/productos/-10- Queso Fynbo - Puyehue (1).png"
-    const auxTexting = 'gs://distribuidora-3-hermanos.appspot.com/produtos/-The name-azulEmperador.jpeg'
-    //console.log(auxTexting.split('-')[3])
 
     return (
         <div>

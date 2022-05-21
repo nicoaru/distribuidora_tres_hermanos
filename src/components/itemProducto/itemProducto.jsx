@@ -2,11 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import './itemProducto.css'
 
-
-
-
 function ItemProducto({ producto, img2 }) {
-
 
     return (
         <div className="itemProducto d-flex justify-content-center">

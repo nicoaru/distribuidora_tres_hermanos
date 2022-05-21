@@ -1,6 +1,5 @@
-import React, { useEffect, useState, useContext } from 'react'
+import React, { useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
-import { ProductConsumer } from '../../context/ProductProvider'
 import {ItemCount} from "../itemCount/itemCount"
 import './itemProdPag.css'
 import { CartContext } from '../../context/cartContext'
@@ -9,7 +8,7 @@ import { CartContext } from '../../context/cartContext'
 const ItemParaPag = ({ producto, img2 }) => {
 
     // ItemCount
-    const {cart, addItem} = useContext(CartContext)
+    const {addItem} = useContext(CartContext)
     const onAdd = (quantity) => {
         addItem(producto, quantity, img2)
         setShowToast(true)
@@ -17,9 +16,9 @@ const ItemParaPag = ({ producto, img2 }) => {
     const [showToast, setShowToast] = useState(false);
     return (
         <div>
-            <div className='d-flex flex-column align items-center justify-content-center'>
+            <div className='main-card'>
                 <Link className="tarjeta col-8 col-sm-4 mb-0" to={'/detalle-producto'} state={{ from: producto.__EMPTY_3, producto: producto, img2: img2 }}>
-                    <img className="card-img-top" src={img2} alt="Card image cap" />
+                    <img className="card-img-top" src={img2} alt="CardIm" />
                     <div className="card-body p-1">
                         <p className="card-text mb-0">{producto.__EMPTY_4}</p>
                         <h5 className="card-text-descripcion">{producto.__EMPTY_5} </h5>

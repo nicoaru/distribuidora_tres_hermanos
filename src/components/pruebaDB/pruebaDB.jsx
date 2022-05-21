@@ -1,7 +1,6 @@
 import { React, useEffect, useState } from "react";
 import { db } from "../firebase/firebase";
-import { storage } from "../firebase/firebase";
-import { collection, doc, getDocs, getDoc } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 
 
 function PruebaDB() {

@@ -1,5 +1,5 @@
-import React, { createContext, useContext, useState, useMemo, useEffect } from 'react';
-import { getDownloadURL, ref, uploadBytesResumable, listAll, deleteObject } from 'firebase/storage';
+import React, { createContext, useContext, useState, useEffect } from 'react';
+import { getDownloadURL, ref, listAll } from 'firebase/storage';
 
 // import azulEmperador from '../img/productos/azulEmperador.jpeg'
 // import comboElJuan from '../img/productos/combo-eljuan.jpeg'
@@ -8,7 +8,7 @@ import { getDownloadURL, ref, uploadBytesResumable, listAll, deleteObject } from
 
 import { db } from "../../src/components/firebase/firebase";
 import { storage } from "../../src/components/firebase/firebase";
-import { collection, query, orderBy, doc, getDocs, getDoc, limit } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 
 
 
@@ -20,10 +20,10 @@ const ProductProvider = ({ children }) => {
 
     //const imagenes = [azulEmperador, comboElJuan, cremaLacteosCLP, cremosoElJuan]
     const [imagenes, setImagenes] = useState([])
-    const [imagenes2, setImagenes2] = useState([])
+    const [imagenes2] = useState([])
 
 
-    const [listadoVariables, setListadoVariables] = useState([])
+    const [ setListadoVariables] = useState([])
 
     const [productosQueryDB, setproductosQueryDB] = useState([])
     const [edicionTexto, setEdicionTexto] = useState([])
@@ -90,8 +90,10 @@ const ProductProvider = ({ children }) => {
     }
 
     useEffect(() => {
-        getRest()
+        getRest();
+        // eslint-disable-next-line
     }, [])
+    
 
     return (
         <ProductContext.Provider
@@ -105,7 +107,6 @@ const ProductProvider = ({ children }) => {
                 setEdicionTexto,
                 edicionDeDatos,
                 setEdicionDeDatos,
-                imagenes,
                 setImagenes,
                 getProductsText,
                 getImagenes,

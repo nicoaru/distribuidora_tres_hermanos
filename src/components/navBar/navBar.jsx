@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import {  NavLink } from 'react-router-dom';
 import { AuthConsumer } from '../../context/AuthProvider';
 import { auth } from '../firebase/firebase';
 import { onAuthStateChanged } from 'firebase/auth';
@@ -15,7 +15,7 @@ function NavBar() {
     let [toggle, setToggle] = useState(true)
     const [editTag, setEditTag] = useState('none')
     const [logOutBtn, setLogOutBtn] = useState('none')
-    const { currentUser, checkUser, logOut } = AuthConsumer()
+    const { currentUser, logOut } = AuthConsumer()
 
     useEffect(() => {
         onAuthStateChanged(auth, (user) => {
@@ -51,7 +51,7 @@ function NavBar() {
                     <Logo location='navbar-brand' />
                 </div>
                 <div className='logoImg'>
-                    <img src={logoImg} alt="logo image" />
+                    <img src={logoImg} alt="logim" />
                 </div>
 
                 <nav className="navbar navbar-expand-lg navbar-light">

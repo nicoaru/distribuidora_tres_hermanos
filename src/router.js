@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Home } from "./pages/home/home";
 import { Conocenos } from "./pages/conocenos/conocenos";
@@ -7,16 +7,13 @@ import { ComoComprar } from "./pages/comoComprar/comoComprar";
 import { Contacto } from "./pages/contacto/contacto";
 import { PageNotFound } from "./pages/pageNotFound/pageNotFound";
 import { Layout } from "./components/layout/layout";
-import DocumentPDF from "./components/pdf/DocumentPDF.jsx";
 import ListaPrecios from "./components/listadoPrecios/ListaPrecios";
 import ProductProvider from "./context/ProductProvider";
 import { PruebaDB } from "./components/pruebaDB/pruebaDB";
-import EditarDatos from "./components/editarDatos/EditarDatos";
 import UploadImg from "./components/uploadImg/UploadImg";
 import LogIn from "./components/logIn/LogIn";
 import EditarAdmin from "./components/editarAdmin/EditarAdmin";
 import AuthProvider from "./context/AuthProvider";
-import { updateCurrentUser } from "firebase/auth";
 import DetalleItem from "./components/detalleItem/DetalleItem";
 import { Cart } from "./pages/cart/cart";
 import { CartProvider } from "./context/cartContext";

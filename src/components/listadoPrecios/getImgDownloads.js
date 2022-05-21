@@ -1,9 +1,4 @@
 
-// getDataUri(imgUrl, function (dataUri) {
-//     logo = dataUri;
-//     console.log("logo=" + logo);
-// });
-
 export function getDataUri(url, cb) {
     var image = new Image();
     image.setAttribute('crossOrigin', 'anonymous'); //getting images from external domain

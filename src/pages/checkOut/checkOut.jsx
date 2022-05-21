@@ -1,12 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { Layout } from '../../components/layout/layout'
 import { dataBase } from '../../firebase/firebase'
-import firebase from 'firebase/app'
+import {firebase} from 'firebase/app'
 import { CartContext } from '../../context/cartContext/cartContext'
 import { Link } from 'react-router-dom'
-import 'firebase/firestore'
 import './checkOut.css'
-
 
 
 function CheckOut() {
@@ -18,8 +16,8 @@ function CheckOut() {
     const [loading, setLoading] = useState()
     const [orderStatus, setOrderStatus] = useState('enCurso')    
     const [orderId, setOrderId] = useState()
-    const [orderContent, setOrderContent] = useState()
-    const [error, setError] = useState()
+    const [setOrderContent] = useState()
+    const [setError] = useState()
 
     useEffect(() => {
         (Array.isArray(cart) && cart.length) ? setOrderStatus('enCurso') : setOrderStatus('carroVacio')

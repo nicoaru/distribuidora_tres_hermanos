@@ -5,7 +5,7 @@ import deleteImg from '../../img/iconos/deleteItem.png'
 import './cartItem.css'
 
 function CartItem({item, imgUrl, quantity}) {
-    const { cart, addItem, removeItem } = useContext(CartContext)
+    const { addItem, removeItem } = useContext(CartContext)
     console.log(item, quantity)
 
 
@@ -16,7 +16,7 @@ function CartItem({item, imgUrl, quantity}) {
     return (
         
         <div className='cartItemContainer'>
-            <img className='cartItemImage' src={imgUrl} />
+            <img className='cartItemImage' src={imgUrl} alt="cartImg"/>
             <div d-flex flex-column>
                 <h2 className='itemMarca'>{item.__EMPTY_4}</h2>
                 <h2 className='itemTitle'>{item.__EMPTY_5}</h2>

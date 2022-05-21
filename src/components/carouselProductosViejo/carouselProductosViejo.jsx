@@ -10,11 +10,7 @@ import { BotonLink } from "../botonLink/botonLink";
 function CarouselProductosViejo({ productosQuery, imagenes2, carouselTitle }) {
  
     let cardsJSX
-    // if (productosParaMostrar.length !== 0) {
-    //     cardsJSX = productosQuery[productosQuery.length - 1].data.map((obj, index) => {
-    //         return <ItemProducto producto={obj} key={index} />})        
-    // }
-
+   
     productosQuery[productosQuery.length - 1]?.data && imagenes2.length > 6 && 
     (cardsJSX = productosQuery[productosQuery.length - 1].data.map((element, id) => {
         return <ItemProducto key={id} producto={element} img2={imagenes2[element.__EMPTY_3]} ></ItemProducto>
