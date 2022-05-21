@@ -17,6 +17,12 @@ const DetalleItem = () => {
     const location = useLocation()
     const {  producto, img2 } = location.state
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+        // eslint-disable-next-line
+
+      }, [])
+
     //Productos para el carousel 
     const { productosQueryDB, imagenes, getProductsText, getImagenes, imagenes2 } = ProductConsumer();
     useEffect(() => {
