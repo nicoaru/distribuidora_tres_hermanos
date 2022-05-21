@@ -3,7 +3,7 @@ import './descargaPrecios.css'
 
 const DescargarPrecios = () => {
     const handlePrecios = () => {
-        window.open('http://localhost:3000/precios')
+        window.open('https://distribuidora-3-hermanos.web.app/precios')
     }
     return (
         <div className='main-descarga-div'>
