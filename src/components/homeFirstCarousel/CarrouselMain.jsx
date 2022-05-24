@@ -48,7 +48,7 @@ const CarrouselMain = () => {
                         // slidesToSlide={3}
                         swipeable={false} 
                         infinite={true}
-                        autoPlay={false}
+                        autoPlay={true}
                         autoPlaySpeed={2500}
                         keyBoardControl={false}
                         arrows={false}
