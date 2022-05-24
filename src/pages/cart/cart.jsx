@@ -1,4 +1,4 @@
-import React, { Fragment, useContext } from 'react'
+import React, { Fragment, useContext, useEffect } from 'react'
 import { CartItem } from '../../components/cartItem/cartItem'
 import { CartContext } from '../../context/cartContext'
 import { Boton } from '../../components/boton/boton';
@@ -6,6 +6,12 @@ import { BotonLink } from '../../components/botonLink/botonLink'
 import './cart.css'
 
 function Cart () {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+        // eslint-disable-next-line
+    }, [])
+
     const {cart, clear, totalCharge} = useContext(CartContext)
     console.log ('cart => ', cart)
     let carritoVacio
@@ -26,7 +32,7 @@ function Cart () {
         let stringUrl = `${encodeURIComponent('Buen dia Distribuidora Tres Hermanos. Te queria hacer el siguiente pedido:')}%0A%0A${cartItemsString.join('%0A')}%0A%0A${encodeURIComponent('*Total:* $')}${totalCharge()}%0A%0A${encodeURIComponent('Muchas gracias!')}`
         console.log('stringParaUrl => ', stringUrl);
         
-        let whatsappLink = `https://wa.me/5491148889851?text=${stringUrl}`
+        let whatsappLink = `https://wa.me/5493537512189?text=${stringUrl}`
         console.log('whatsappLink => ', whatsappLink);
         window.open(whatsappLink);
     }
