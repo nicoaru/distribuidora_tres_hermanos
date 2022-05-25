@@ -12,10 +12,10 @@ function Footer() {
                         <Logo location='logo-brand' />
                     </div>
                     <div className='iconos-div d-flex justify-content-center align-items-center'>
-                        <a className='footer-iconos' target='_blank' rel="noreferrer" href='https://www.facebook.com'>
+                        <a className='footer-iconos' target='_blank' rel="noreferrer" href='https://www.facebook.com/Distribuidora-los-3-hermanos-Bell-ville-Cordoba-111662890745850'>
                             <img className='me-3 me-md-4' src={iconoFacebook} alt="img3"/>
                         </a>
-                        <a className='footer-iconos' target='_blank' rel="noreferrer" href='https://www.instagram.com'>
+                        <a className='footer-iconos' target='_blank' rel="noreferrer" href='https://www.instagram.com/quesos_los3hermanos/'>
                             <img src={iconoInstagram} alt="img3"/>
                         </a>
                     </div>
