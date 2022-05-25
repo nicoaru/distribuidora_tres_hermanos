@@ -57,7 +57,7 @@ const DetalleItem = () => {
                             <h3 className='itemDetail-textPrecio'>$ {producto.__EMPTY_7} / {producto.__EMPTY_6}</h3>
                         </div>
                         <div className='detalles-SKU'>
-                            <p className='itemDetail-textDescripcion'>Descripcion del producto si la huebiera. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam fugit repudiandae sapiente ad, nulla in id veniam assumenda. Nobis, placeat. Corporis dolor facere voluptatibus quam tempora alias eum numquam minus!</p>
+                            <p className='itemDetail-textDescripcion'>{producto.__EMPTY_8}</p>
                         </div>
 
                         <ItemCount onAdd={onAdd} showToast={showToast} setShow={setShowToast} initial={0.5} unidadVenta={producto.__EMPTY_6}></ItemCount>
