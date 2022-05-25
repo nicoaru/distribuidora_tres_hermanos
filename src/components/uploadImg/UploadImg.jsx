@@ -44,9 +44,12 @@ const UploadImg = () => {
                     .then((snapshot) => {
                         console.log('Uploaded', snapshot, 'bytes.');
                         console.log('File metadata:', snapshot.metadata);
-                    }).catch(err => console.log(err))
+                    }).then(() => alert('Foto subida correctamente')
+                    ).catch(err => {
+                        alert('Error al subir la foto')
+                        console.log(err)
+                    })
             }
-            console.log('upload ejecutado')
         }
 
     }
@@ -61,7 +64,10 @@ const UploadImg = () => {
                 alert('Ese id de producto no tiene imagen asociada.')
             } else {
                 const imgRef = ref(storage, aux[0].path)
-                deleteObject(imgRef).then(res => console.log(res))
+                deleteObject(imgRef).then(res => {
+                    alert('Imagen eliminada')
+                    console.log(res)
+                })
                 getImagenes()
             }
         }

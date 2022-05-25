@@ -51,7 +51,7 @@ const ListaPrecios = () => {
                                     <td>{element.__EMPTY_4}</td>
                                     <td>$ {element.__EMPTY_7} / {element.__EMPTY_6}</td>
                                     <td>{element.__EMPTY_5}</td>
-                                    <td className='tabla-descripcion'>{element.descripcion}</td>
+                                    <td className='tabla-descripcion'>{element.__EMPTY_8}</td>
                                 </tr>
                             )
                     })}
