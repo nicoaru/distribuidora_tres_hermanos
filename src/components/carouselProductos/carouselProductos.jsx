@@ -54,6 +54,9 @@ function CarouselProductos({ productosQuery, imagenes2, carouselTitle }) {
                             containerClass="carousel-container">
                                 {
                                     productosQuery[productosQuery.length - 1].data.map((element, id) => {
+                                        if (id === 0)
+                                            return 
+
                                         return <ItemProducto key={id} producto={element} img2={imagenes2[element.__EMPTY_3]} ></ItemProducto>
                                     })
                                 }
